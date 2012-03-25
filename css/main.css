@@ -10,7 +10,6 @@
 .title-element:hover{
     color:#1010c7;
 }
-
 body {
     background-color:#6F6C6C;
      margin: 0;
@@ -23,7 +22,6 @@ body {
     width: 900px;
     min-height:1024px;
     border-radius: 10px;
-
 }
 .bodyText {
     padding:10px;    
