@@ -1,13 +1,8 @@
-require(["lib/jquery","lib/jquery-ui","lib/jquery-ui-spinner"], function(){
+require(["lib/jquery","lib/jquery-ui"], function(){
     var loadSubPage = function(pageName, then){
         $(".body").load(pageName+".html", then);    
     };
-    var addSpinner = function(){
-        $(".spinner").attr("value",0);
-        $(".spinner").attr("min",0);
-        $(".spinner").attr("max",100);
-        $(".spinner").attr("width",20);
-    };
+    
     
     $().ready(function(){
          loadSubPage("mainPage");
@@ -15,7 +10,9 @@ require(["lib/jquery","lib/jquery-ui","lib/jquery-ui-spinner"], function(){
             loadSubPage("mainPage");
         });
         $("#newGame").click(function(){
-            loadSubPage("newGame", addSpinner);
+            require(["newGame"],function(newGame){
+                loadSubPage("newGame",newGame.init);
+            });
         });
         
     });

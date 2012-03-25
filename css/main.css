@@ -1,21 +1,26 @@
 .title {
-    background-color:black;
-    color:white;
+    color:#45402A;
     text-align:center;
+    height: 50px;
 }
 .title-element{
+    background-color:#C72121;
     display:inline;
     padding:10px;
+    border-radius: 10px;
+    font-size:larger;
 }
 .title-element:hover{
-    color:#1010c7;
+    color:white;
+    
 }
 body {
     background-color:#6F6C6C;
-     margin: 0;
+    background-image:url('../image/leather.jpg');
+    margin: 0;
 }
 .body{
-    background-color:#ffffd6;
+    background-color:#FEC275;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -25,4 +30,11 @@ body {
 }
 .bodyText {
     padding:10px;    
+}
+.button{
+    display:inline;
+}
+.button:hover {
+    background-color: black;
+    color :#FEC275;
 }
