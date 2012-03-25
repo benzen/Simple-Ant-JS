@@ -4,7 +4,7 @@
     height: 50px;
 }
 .title-element{
-    background-color:#C72121;
+    background-color:#215ec7;
     display:inline;
     padding:10px;
     border-radius: 10px;
@@ -15,18 +15,20 @@
     
 }
 body {
-    background-color:#6F6C6C;
+    background-color:#383434;
     background-image:url('../image/leather.jpg');
     margin: 0;
 }
 .body{
-    background-color:#FEC275;
+    background-color:#f0faff;
     position: relative;
     margin-left: auto;
     margin-right: auto;
     width: 900px;
     min-height:1024px;
     border-radius: 10px;
+    border-style: outset;
+    border-color:#383434;
 }
 .bodyText {
     padding:10px;    
