@@ -1,20 +1,15 @@
-define(["lib/jquery","lib/coffee-script"],()->
-    initSpinners =
-        $(".spinner").attr("value",0);
-        $(".spinner").attr("min",0);
-        $(".spinner").attr("max",100);
-        $(".spinner").attr("width",20);
-
-    initButtons = 
-        $(".start").click(
-                alert("test");
-
-        $(".cancel").click(
-            initSpinners();
-
+define ["lib/jquery"], ->
+    initSpinners = ->
+        $(".spinner").attr("value",0)
+        $(".spinner").attr("min",0)
+        $(".spinner").attr("max",100)
+        $(".spinner").attr("width",20)
+    initButtons = ->
+        $(".start").click -> alert("test")
+        $(".cancel").click -> initSpinners()
     return {
-        init: 
-            $().ready(
-                initSpinners();
-                initButtons();
-        }
+        init: ->
+            $().ready ->
+                initSpinners()
+                initButtons()
+    }
