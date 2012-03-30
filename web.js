@@ -14,7 +14,7 @@ app.listen(port, function() {
 });
 
 app.get('/ant', function(request, response) {
-     new a.Ant(0,0).smell("nothing");
+     new a(0,0).smell("nothing");
 
     response.send('Hello World!');
 });
