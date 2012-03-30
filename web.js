@@ -1,6 +1,6 @@
 var express = require('express');
 require("coffee-script");
-require("server/ant");
+require("./server/ant");
 
 var app = express.createServer(express.logger());
 
@@ -12,7 +12,6 @@ var port = process.env.PORT || 3000;
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
-
 
 app.get('/ant', function(request, response) {
  new Ant().smell("nothing");
