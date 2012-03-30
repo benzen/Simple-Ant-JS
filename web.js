@@ -1,6 +1,6 @@
 var express = require('express');
 require("coffee-script");
-var a = require("./server/ant");
+var a = require("./server/ant.coffee");
 
 var app = express.createServer(express.logger());
 
