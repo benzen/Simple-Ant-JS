@@ -30,3 +30,4 @@ class Ant
         msg = "follow track"
         console.log(msg)
         return msg
+module.exports = Ant
