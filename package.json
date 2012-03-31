@@ -6,7 +6,7 @@
     "coffee-script":"1.2.0"
   },
   "engines": {
-    "node": "0.6.x",
+    "node": "0.4.7",
     "npm":  "1.0.x"
   }
 }
