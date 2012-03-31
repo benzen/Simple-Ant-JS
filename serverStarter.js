@@ -1,2 +1,2 @@
 require("coffee-script");
-var routes = require(".server/routes.coffee")
+require(".server/routes");
