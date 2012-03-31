@@ -1,12 +1,12 @@
 
-express = require('express');
+express = require('express')
 
-a = require("./server/ant.coffee");
+a = require("./ant.coffee")
 
 app = express.createServer express.logger()
 
 app.get('/', (request, response)->
-  response.send('Hello World!');
+  response.send('Hello World!')
 )
 
 port = process.env.PORT || 3000;
