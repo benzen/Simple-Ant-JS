@@ -1,7 +1,7 @@
 b = require "./Board"
 a = require "./ant"
 
-game = (anthillx,anthillY, nbOfAnt, boardWidth, boardHeight, eatX, eatY)->
+game = (anthillX,anthillY, nbOfAnt, boardWidth, boardHeight, eatX, eatY)->
   board = new b.Board(boardWidth, boardHeight, anthillX, anthillY, eatX, eatY)
   ants = for times in nbOfAnt
     new a.Ant(anthillX,anthillY)
