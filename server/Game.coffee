@@ -1,4 +1,4 @@
-b = require "./board"
+b = require "./Board"
 a = require "./ant"
 
 game = (anthillx,anthillY, nbOfAnt, boardWidth, boardHeight, eatX, eatY)->
