@@ -4,9 +4,9 @@ require("html")
 game = require("./Game")
 
 app = express.createServer express.logger()
-
+app.use( express.static(__dirname + '/public'))
 app.get('/', (request, response)->
-  response.render("./public/index.html")
+  response.render("index.html")
 )
 
 port = process.env.PORT || 3000;
