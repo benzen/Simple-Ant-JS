@@ -13,7 +13,7 @@ class Ant
         when "eatTrack" then followTrack
         else findANewWayOfLife
 
-    randonMove:->
+    randomMove:->
         randomX = Math.round( Math.random()*2-1)
         randomY = Math.round( Math.random()*2-1)
         @x = @x + randomX
