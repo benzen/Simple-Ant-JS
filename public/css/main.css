@@ -19,7 +19,7 @@ body {
     margin: 0;
 }
 .body{
-    background-color:#323436;
+    background-color:#111111;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -28,8 +28,8 @@ body {
     border-radius: 10px;
     border-style: outset;
     border-color:#383434;
-    color:#083434;
-    
+    color:#7d7d7d;
+    font-weight: bold;
 }
 .bodyText {
     padding:10px;    
