@@ -1,12 +1,15 @@
 express = require('express')
+require('jade')
 game = require("./Game")
 
+
+
 app = express.createServer express.logger()
-app.register('.html', require('jade'))
+##app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (request, response)->
-  response.render("index.html")
+  response.render("index.jade")
 )
 
 port = process.env.PORT || 3000;
