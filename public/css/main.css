@@ -16,11 +16,10 @@
 }
 body {
     background-color:#383434;
-    background-image:url('../image/leather.jpg');
     margin: 0;
 }
 .body{
-    background-color:#f0faff;
+    background-color:#323436;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -29,6 +28,8 @@ body {
     border-radius: 10px;
     border-style: outset;
     border-color:#383434;
+    color:#083434;
+    
 }
 .bodyText {
     padding:10px;    
