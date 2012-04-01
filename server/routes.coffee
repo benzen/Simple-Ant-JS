@@ -1,7 +1,7 @@
 
 express = require('express')
 
-game = require("./game")
+game = require("./Game")
 
 app = express.createServer express.logger()
 
