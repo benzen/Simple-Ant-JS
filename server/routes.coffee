@@ -6,7 +6,9 @@ game = require("./Game")
 
 app = express.createServer express.logger()
 
-app.use( express.static(__dirname + '../public') )
+app.configure(->  
+  app.use( express.static(__dirname + '/../public') )  
+)
 
 
 #app.get('/', (request, response)->
