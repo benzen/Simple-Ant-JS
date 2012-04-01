@@ -2,7 +2,7 @@ express = require('express')
 game = require("./Game")
 
 app = express.createServer express.logger()
-app.use(express.staticProvider(__dirname + '/public'))
+##app.use(express.static(__dirname + '/public'))
 
 
 app.get('/', (request, response)->
