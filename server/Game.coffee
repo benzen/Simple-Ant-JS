@@ -7,3 +7,5 @@ game = (anthillx,anthillY, nbOfAnt, boardWidth, boardHeight, eatX, eatY)->
     new a.Ant(anthillX,anthillY)
   for ant in ants
     ant.smell()
+    
+ exports.startGame = game

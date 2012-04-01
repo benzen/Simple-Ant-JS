@@ -1,7 +1,7 @@
 
 express = require('express')
 
-Ant = require("./ant")
+game = require("./game")
 
 app = express.createServer express.logger()
 
@@ -14,8 +14,13 @@ app.listen(port, ()->
   console.log("Listening on " + port)
 )
 
-app.get('/ant', (request, response)->
-  console.log(Ant.A)
-  new Ant.Ant(0,0).smell("nothing")
-  response.send('Hello World!')
+app.get('/startAnt', (request, response)->
+  anthillx = 10
+  anthillY = 10
+  nbOfAnt = 1
+  boardWidth = 20
+  boardHeight = 20
+  eatX=18
+  eatY=18
+  game.start(anthillx,anthillY, nbOfAnt, boardWidth, boardHeight, eatX, eatY)
 )

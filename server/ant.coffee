@@ -31,4 +31,5 @@ class Ant
         
     goTo:(x,y)->
       console.log "going somewhere (#{x}-#{y})"
+
 exports.Ant = Ant

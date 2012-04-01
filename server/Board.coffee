@@ -23,4 +23,4 @@ class Board
   addSmell:(x,y)->
     @smell[x][y]=@smell[x][y]+1
   
-  
+exports.Board = Board  
