@@ -9,7 +9,7 @@ app = express.createServer express.logger()
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (request, response)->
-  response.render("game")
+  response.render("game.jade")
 )
 
 port = process.env.PORT || 3000;
