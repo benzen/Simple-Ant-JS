@@ -8,30 +8,24 @@ class Ant
     smell:(odor)->
       console.log("i smell #{odor}")
       switch odor
-        when "eat"  then goBackHome
-        when "nothing" then this.randomMove()
-        when "eatTrack" then followTrack
-        else findANewWayOfLife
+        when "eat"  then @goBackHome
+        when "nothing" then @randomMove()
+        when "eatTrack" then @followTrack()
+        else @findANewWayOfLife()
 
     randomMove:->
         randomX = Math.round( Math.random()*2-1)
         randomY = Math.round( Math.random()*2-1)
         @x = @x + randomX
         @y = @y + randomY
-        console.log("random move to #{@x}-#{@y}")
+        console.log "random move to #{@x}-#{@y}"
         
     findANewWayOfLife:->
-        message = "I need to find a new way of life before dieing"
-        console.log(msg)
-        return msg
+        console.log "I need to find a new way of life...to late i'm die'ng"
         
     goBackHome:->
-        message = "go back"
-        console.log(msg)
-        return msg
+        console.log "go back home"
         
     followTrack:->
-        msg = "follow track"
-        console.log(msg)
-        return msg
+        console.log "follow track"
 exports.Ant = Ant
