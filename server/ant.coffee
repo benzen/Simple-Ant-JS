@@ -28,4 +28,7 @@ class Ant
         
     followTrack:->
         console.log "follow track"
+        
+    goTo:(x,y)->
+      console.log "going somewhere (#{x}-#{y})"
 exports.Ant = Ant
