@@ -15,6 +15,7 @@ app.listen(port, ()->
 )
 
 app.get('/ant', (request, response)->
+  console.log(ant)
   new ant.Ant(0,0).smell("nothing")
   response.send('Hello World!')
 )
