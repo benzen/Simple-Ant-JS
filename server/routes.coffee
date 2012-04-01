@@ -2,8 +2,8 @@ express = require('express')
 game = require("./Game")
 
 app = express.createServer express.logger()
-##app.use(express.static(__dirname + '/public'))
-
+app.register('.html', require('jade'))
+app.use(express.staticProvider(__dirname + '/public'));
 
 app.get('/', (request, response)->
   response.render("index.html")
