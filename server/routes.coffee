@@ -10,7 +10,7 @@ app.configure(->  app.use( express.static(__dirname + '/public') )  )
 ##app.set('view options', { layout: false })
 
 app.get('/', (request, response)->
-  response.render("index.html")
+  response.render("./public/index.html")
 )
 
 port = process.env.PORT || 3000;
