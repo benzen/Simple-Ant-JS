@@ -1,7 +1,7 @@
 
 express = require('express')
 
-a = require("./ant.coffee")
+a = require("./ant")
 
 app = express.createServer express.logger()
 
