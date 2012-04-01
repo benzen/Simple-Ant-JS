@@ -1,9 +1,7 @@
 class Ant
-    construct:(anthillX,anthillY)->
+    construct:(@anthillX,@anthillY)->
         @x=0
         @y=0
-        @anthillX = anthillX
-        @anthillY = anthillY
         
     smell:(odor)->
       console.log("i smell #{odor}")
