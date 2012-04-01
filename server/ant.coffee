@@ -6,14 +6,14 @@ class Ant
         @anthillY = anthillY
         
     smell:(odor)->
-      console.log("i smell #(odor)")
+      console.log("i smell #{odor}")
       switch odor
         when "eat"  then goBackHome
         when "nothing" then @randomMove()
         when "eatTrack" then followTrack
         else findANewWayOfLife
 
-    randonMove:->
+    @randonMove:->
         randomX = Math.round( Math.random()*2-1)
         randomY = Math.round( Math.random()*2-1)
         @x = @x + randomX
