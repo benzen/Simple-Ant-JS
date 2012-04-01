@@ -6,12 +6,12 @@ game = require("./Game")
 
 app = express.createServer express.logger()
 
-app.configure(->  app.use( express.static(__dirname + '/public') )  )
+app.configure(->  app.use( express.static( '/public') )  )
 
 
-//app.get('/', (request, response)->
-//  response.render("/public/index.html")
-//)
+#app.get('/', (request, response)->
+#  response.render("/public/index.html")
+#)
 
 port = process.env.PORT || 3000;
 app.listen(port, ()->
