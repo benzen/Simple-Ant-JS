@@ -1,7 +1,7 @@
 
 express = require('express')
 
-ant = require("./ant")
+Ant = require("./ant")
 
 app = express.createServer express.logger()
 
@@ -15,7 +15,7 @@ app.listen(port, ()->
 )
 
 app.get('/ant', (request, response)->
-  console.log(ant.ant)
-  new ant.Ant(0,0).smell("nothing")
+  console.log(Ant.A)
+  new Ant.Ant(0,0).smell("nothing")
   response.send('Hello World!')
 )
