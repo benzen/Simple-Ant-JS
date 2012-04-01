@@ -6,7 +6,8 @@ game = require("./Game")
 
 app = express.createServer express.logger()
 ##app.set('view engine', 'jade');
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'))
+app.set('view options', { layout: false })
 
 app.get('/', (request, response)->
   response.render("game.jade")
