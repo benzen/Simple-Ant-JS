@@ -1,12 +1,12 @@
 
 express = require('express')
-
+require("html")
 game = require("./Game")
 
 app = express.createServer express.logger()
 
 app.get('/', (request, response)->
-  response.render("public/index.html")
+  response.render("./public/index.html")
 )
 
 port = process.env.PORT || 3000;
