@@ -5,13 +5,13 @@ game = require("./Game")
 
 
 app = express.createServer express.logger()
-##app.set('view engine', 'jade');
-app.configure(->  app.use( express.static(__dirname + '/public') )  )
-##app.set('view options', { layout: false })
 
-app.get('/', (request, response)->
-  response.render("/public/index.html")
-)
+app.configure(->  app.use( express.static(__dirname + '/public') )  )
+
+
+//app.get('/', (request, response)->
+//  response.render("/public/index.html")
+//)
 
 port = process.env.PORT || 3000;
 app.listen(port, ()->
