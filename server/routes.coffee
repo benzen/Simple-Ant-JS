@@ -6,7 +6,7 @@ game = require("./Game")
 app = express.createServer express.logger()
 
 app.get('/', (request, response)->
-  response.send('Hello World!')
+  response.render("public/index.html")
 )
 
 port = process.env.PORT || 3000;
