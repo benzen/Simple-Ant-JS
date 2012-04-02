@@ -28,5 +28,5 @@ app.get('/startAnt', (request, response)->
   boardHeight = 20
   eatX=18
   eatY=18
-  game.startGame(anthillx,anthillY, nbOfAnt, boardWidth, boardHeight, eatX, eatY)
+  response.send game.startGame(anthillx,anthillY, nbOfAnt, boardWidth, boardHeight, eatX, eatY)
 )

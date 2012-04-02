@@ -9,5 +9,6 @@ game = (anthillX,anthillY, nbOfAnt, boardWidth, boardHeight, eatX, eatY)->
   console.log "Start game"
   for ant in ants
     ant.smell("nothing")
+  10
     
  exports.startGame = game
