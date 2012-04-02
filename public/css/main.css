@@ -12,7 +12,6 @@
 }
 .title-element:hover{
     color:white;
-    
 }
 body {
     background-color:#383434;
@@ -40,8 +39,8 @@ body {
     border-radius:10px;
     padding:5px;
     background-color:#215ec7;
+    color:black;
 }
 .button:hover {
-    background-color: #215ec7;
-    color :white;
+    color:white;
 }
