@@ -42,6 +42,6 @@ body {
     background-color:#215ec7;
 }
 .button:hover {
-    background-color: black;
-    color :#215ec7;
+    background-color: #215ec7;
+    color :white;
 }
