@@ -5,9 +5,8 @@ define ["lib/jquery"], ->
         $(".spinner").attr("max",100)
         $(".spinner").attr("width",20)
     initButtons = ->
-        $(".start").click -> startGame()
-    startGame = ->
-        $.ajax
+        $(".start").click -> 
+          $.ajax
             url:"startAnt"
             data:
                 nbOfAnt: $("#nbOfAnts").val()

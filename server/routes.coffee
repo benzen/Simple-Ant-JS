@@ -20,7 +20,7 @@ app.listen(port, ()->
   console.log("Listening on " + port)
 )
 
-app.get('/startAnt', (request, response)->
+app.get('/createGame', (request, response)->
   anthillx = 10
   anthillY = 10
   nbOfAnt = 1
@@ -28,5 +28,5 @@ app.get('/startAnt', (request, response)->
   boardHeight = 20
   eatX=18
   eatY=18
-  response.send game.startGame(anthillx,anthillY, nbOfAnt, boardWidth, boardHeight, eatX, eatY)
+  response.send game.createGame(anthillx,anthillY, nbOfAnt, boardWidth, boardHeight, eatX, eatY)
 )
