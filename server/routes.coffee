@@ -1,21 +1,32 @@
-
 express = require('express')
+require('jade')
+game = require("./Game")
 
-a = require("./ant.coffee")
+
 
 app = express.createServer express.logger()
 
-app.get('/', (request, response)->
-  response.send('Hello World!')
+app.configure(->  
+  app.use( express.static(__dirname + '/../public') )  
 )
+
+
+#app.get('/', (request, response)->
+#  response.render("/public/index.html")
+#)
 
 port = process.env.PORT || 3000;
 app.listen(port, ()->
   console.log("Listening on " + port)
 )
 
-app.get('/ant', (request, response)->
-  console.log(a)
-  new Ant(0,0).smell("nothing")
-  response.send('Hello World!')
+app.get('/startAnt', (request, response)->
+  anthillx = 10
+  anthillY = 10
+  nbOfAnt = 1
+  boardWidth = 20
+  boardHeight = 20
+  eatX=18
+  eatY=18
+  game.startGame(anthillx,anthillY, nbOfAnt, boardWidth, boardHeight, eatX, eatY)
 )
