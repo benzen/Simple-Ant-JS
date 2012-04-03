@@ -8,6 +8,7 @@ define ["lib/jquery","./showGame"], ($,showGame) ->
         $(".start").click -> 
           $.ajax {
             url:"createGame"
+            success:(data)-> showGame.showGame data
             data:{
                 nbOfAnt: $("#nbOfAnts").val()
                 anthillX: $("#anthillX").val()
@@ -17,7 +18,6 @@ define ["lib/jquery","./showGame"], ($,showGame) ->
                 mapSize: $("#mapSize").val()
               }
             }
-            success:(data)-> showGame.showGame data
             
     return {
         init: ->
