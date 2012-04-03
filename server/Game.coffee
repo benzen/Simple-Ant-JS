@@ -7,9 +7,10 @@ incCounter = ->
   
 games = []
 saveGame = (gameId, board, ants)->
-  games[gameId]= 
+  games[gameId]= {
     "ants":ants
     "board":board
+  }
 
 startGame=(gameId)->
   console.log("game object #{games[gameId]}")
