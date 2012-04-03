@@ -16,6 +16,7 @@ startGame=(gameId)->
   console.log("ant retreived")
   for ant in ants
     ant.smell("nothing")
+  console.log("ants #{ants}")
   console.log("ants started")
 
 createGame = (anthillX,anthillY, nbOfAnt, boardWidth, boardHeight, eatX, eatY)->
