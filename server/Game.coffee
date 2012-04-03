@@ -22,7 +22,11 @@ createGame = (anthillX,anthillY, nbOfAnt, boardWidth, boardHeight, eatX, eatY)->
     new a.Ant(anthillX,anthillY)
   saveGame incCounter(), board, ants
   "#{counter}"
-    
+
+status = (gameId)->
+  games[gameId].board.status
+  
  exports.startGame = startGame
  exports.saveGame = saveGame
  exports.createGame = createGame
+ exports.status = status

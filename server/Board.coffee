@@ -22,5 +22,18 @@ class Board
   ## make a path from a food place
   addSmell:(x,y)->
     @smell[x][y]=@smell[x][y]+1
+    
+  status:->
+    caseToString=(x,y)->
+      if x == @anthillX and y == @anthillY then return "A"
+      else if x == @eatX and y == @eatY then return "E"
+      else "#{@smell[x][y]}"
+    map=[]
+    for row in @height
+      map[row]=[]
+      for colon in @width
+       map[row][colon]=caseToString(row,colon) 
+    map
+      
   
 exports.Board = Board  
