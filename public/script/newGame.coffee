@@ -1,4 +1,4 @@
-define ["lib/jquery"], ->
+define ["lib/jquery","./showGame"], ($,showGame) ->
     initSpinners = ->
         $(".spinner").attr("value",0)
         $(".spinner").attr("min",0)
@@ -17,6 +17,7 @@ define ["lib/jquery"], ->
                 mapSize: $("#mapSize").val()
               }
             }
+            success:(data)-> showGame.showGame data
             
     return {
         init: ->
