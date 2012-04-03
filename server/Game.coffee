@@ -6,7 +6,8 @@ incCounter = ->
   counter++
   
 games = []
-saveGame = (gameId, board, ants)->
+saveGame = (board, ants)->
+  gameId = incCounter()
   games[gameId]= {
     "ants":ants
     "board":board
@@ -25,8 +26,7 @@ createGame = (anthillX,anthillY, nbOfAnt, boardWidth, boardHeight, eatX, eatY)->
   board = new b.Board(boardWidth, boardHeight, anthillX, anthillY, eatX, eatY)
   ants = for times in nbOfAnt
     new a.Ant(anthillX,anthillY)
-  saveGame incCounter(), board, ants
-  "#{counter}"
+  "#{saveGame  board, ants}"
 
 status = (gameId)->
   games[gameId].board.status
