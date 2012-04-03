@@ -6,15 +6,17 @@ define ["lib/jquery"], ->
         $(".spinner").attr("width",20)
     initButtons = ->
         $(".start").click -> 
-          $.ajax
+          $.ajax {
             url:"startAnt"
-            data:
+            data:{
                 nbOfAnt: $("#nbOfAnts").val()
                 anthillX: $("#anthillX").val()
                 anthillY: $("#anthillY").val()
                 eatX: $("#eatX").val()
                 eatY: $("#eatY").val()
                 mapSize: $("#mapSize").val()
+              }
+            }
             
     return {
         init: ->
