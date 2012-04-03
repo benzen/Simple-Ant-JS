@@ -1,5 +1,5 @@
 define ["lib/jquery"], ->
-  drawGraph:->
+  drawGraph =->
     ctx = $("canvas").getContext("2d")
     drawAnt ctx
     drawPath ctx
