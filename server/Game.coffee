@@ -22,6 +22,7 @@ createGame = (anthillX,anthillY, nbOfAnt, boardWidth, boardHeight, eatX, eatY)->
   ants = for times in nbOfAnt
     new a.Ant(anthillX,anthillY)
   saveGame incCounter(), board, ants
+  counter
     
  exports.startGame = startGame
  exports.saveGame = saveGame
