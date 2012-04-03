@@ -1,8 +1,7 @@
 define ["lib/jquery"], ->
-  showGame:()->
-    changePage()
-  changePage:->
+  showGame = ->
     $(".body").load "showGame.html"
+
   return {
     showGame:showGame
-}
+  }
