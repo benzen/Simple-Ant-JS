@@ -12,6 +12,7 @@ saveGame = (gameId, board, ants)->
     "board":board
 
 startGame=(gameId)->
+  console.log("game object #{games[gameId]}")
   ants = games[gameId].ants
   console.log("ant retreived")
   for ant in ants
