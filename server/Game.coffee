@@ -13,8 +13,10 @@ saveGame = (gameId, board, ants)->
 
 startGame=(gameId)->
   ants = games[gameId].ants
+  console.log("ant retreived")
   for ant in ants
     ant.smell("nothing")
+  console.log("ants started")
 
 createGame = (anthillX,anthillY, nbOfAnt, boardWidth, boardHeight, eatX, eatY)->
   board = new b.Board(boardWidth, boardHeight, anthillX, anthillY, eatX, eatY)
