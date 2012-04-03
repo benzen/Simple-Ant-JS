@@ -3,8 +3,7 @@ a = require "./ant"
 
 counter = 0
 incCounter = ->
-  coutner = counter+1
-  counter
+  counter++
   
 games = []
 saveGame = (gameId, board, ants)->
