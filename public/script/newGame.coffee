@@ -7,7 +7,7 @@ define ["lib/jquery"], ->
     initButtons = ->
         $(".start").click -> 
           $.ajax {
-            url:"startAnt"
+            url:"createGame"
             data:{
                 nbOfAnt: $("#nbOfAnts").val()
                 anthillX: $("#anthillX").val()
