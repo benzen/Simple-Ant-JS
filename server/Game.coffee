@@ -29,7 +29,9 @@ createGame = (anthillX,anthillY, nbOfAnt, boardWidth, boardHeight, eatX, eatY)->
   "#{saveGame  board, ants}"
 
 status = (gameId)->
-  games[gameId].board.status
+  status = games[gameId].board.status
+  console.log status 
+  status
   
  exports.startGame = startGame
  exports.saveGame = saveGame
