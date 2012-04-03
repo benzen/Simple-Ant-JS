@@ -1,4 +1,4 @@
-define ["lib/jquery","cs!showGame"], ($,showGame) ->
+define ["lib/jquery","cs!showGame"], (jquery,showGame) ->
     initSpinners = ->
         $(".spinner").attr("value",0)
         $(".spinner").attr("min",0)
