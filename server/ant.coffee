@@ -6,7 +6,7 @@ class Ant
     smell:(odor)->
       console.log("i smell #{odor}")
       switch odor
-        when "eat"  then @goBackHome
+        when "eat"  then @goBackHome()
         when "nothing" then @randomMove()
         when "eatTrack" then @followTrack()
         else @findANewWayOfLife()
