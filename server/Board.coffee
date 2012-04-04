@@ -23,18 +23,17 @@ class Board
   ## make a path from a food place
   addSmell:(x,y)->
     @smell[x][y]=@smell[x][y]+1
-    
-  status:->
-    caseToString=(x,y)->
+  caseToString:(x,y)->
       if x == @anthillX and y == @anthillY then return "A"
       else if x == @eatX and y == @eatY then return "E"
-      else "#{@smell[x][y]}"
+      else "#{@smell[x][y]}"  
+  status:->
+    
     map=[]
     for row in [0..@mapSize]
-      console.log("map line")
       map[row]=[]
-      for colon in [0..@mapSize]
-        map[row][colon]=caseToString(row,colon) 
+      for column in [0..@mapSize]
+        map[row][column] = caseToString(row,column) 
     map
       
   
