@@ -1,5 +1,6 @@
 class Board
   construct:(@mapSize, @anthillX,@anthillY,@eatX,@eatY)->
+    console.log("map size #{@mapSize}")
     for row in [0..@mapSize]
       @smell[row]=[]
       for colon in [0..@mapSize]
