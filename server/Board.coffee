@@ -27,7 +27,7 @@ class Board
   caseToString:(x,y)->
     console.log("anthillx #{@anthillX} anthily  #{@anthillY}")
     console.log("eatx #{@eatX} eaty  #{@eatY}")
-    console.log("x #{@x} y  #{@y}")
+    console.log("x #{x} y  #{y}")
     if x == @anthillX and y == @anthillY
       return "A"
     else if x == @eatX and y == @eatY 
