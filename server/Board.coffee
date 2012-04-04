@@ -29,15 +29,12 @@ class Board
       if x == @anthillX and y == @anthillY then return "A"
       else if x == @eatX and y == @eatY then return "E"
       else "#{@smell[x][y]}"
-    console.log("status")
-    console.log("#{@mapSize}")
     map=[]
     for row in [0..@mapSize]
       console.log("map line")
       map[row]=[]
       for colon in [0..@mapSize]
-       console.log("row #{row} colon #{colon}")
-       map[row][colon]=caseToString(row,colon) 
+        map[row][colon]=caseToString(row,colon) 
     map
       
   
