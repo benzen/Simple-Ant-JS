@@ -22,6 +22,8 @@ app.get('/createGame', (req, resp)->
   mapSize  = req.params.mapSize
   eatX     = req.params.eatX
   eatY     = req.params.eatY
+  for param in req.params
+    console.log("param #{param} #{req.params[param]}")
   console.log("map size #{mapSize}")
   resp.send game.createGame(anthillx,anthillY, nbOfAnt, mapSize, eatX, eatY)
 )
