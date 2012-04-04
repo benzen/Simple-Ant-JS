@@ -25,9 +25,14 @@ class Board
     @smell[x][y]=@smell[x][y]+1
   
   caseToString:(x,y)->
-      if x == @anthillX and y == @anthillY then return "A"
-      else if x == @eatX and y == @eatY then return "E"
-      else "#{@smell[x][y]}"  
+    console.log("anthillx #{@anthillX} anthily  #{@anthillY}")
+    console.log("eatx #{@eatX} eaty  #{@eatY}")
+    console.log("x #{@x} y  #{@y}")
+    if x == @anthillX and y == @anthillY
+      return "A"
+    else if x == @eatX and y == @eatY 
+      return "E"
+    else return "#{@smell[x][y]}"  
   
   status:->  
     map=[]
