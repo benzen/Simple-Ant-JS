@@ -1,5 +1,5 @@
 class Ant
-    construct:(@anthillX,@anthillY)->
+    constructor:(@anthillX,@anthillY)->
         @x=0
         @y=0
         
