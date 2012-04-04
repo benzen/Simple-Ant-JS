@@ -21,8 +21,8 @@ startGame=(gameId)->
   for ant in ants
     ant.smell("nothing")
 
-createGame = (anthillX,anthillY, nbOfAnt, boardWidth, boardHeight, eatX, eatY)->
-  board = new b.Board(boardWidth, boardHeight, anthillX, anthillY, eatX, eatY)
+createGame = (anthillX,anthillY, nbOfAnt, mapSize, eatX, eatY)->
+  board = new b.Board(boardWidth, mapSize, anthillX, anthillY, eatX, eatY)
   ants = for times in nbOfAnt
     new a.Ant(anthillX,anthillY)
   "#{saveGame  board, ants}"

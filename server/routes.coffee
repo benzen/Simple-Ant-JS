@@ -18,13 +18,12 @@ app.listen(port, ()->
 app.get('/createGame', (req, response)->
   
   anthillx = req.params.anthillX
-  anthillY = 10
-  nbOfAnt = 1
-  boardWidth = 20
-  boardHeight = 20
-  eatX=18
-  eatY=18
-  response.send game.createGame(anthillx,anthillY, nbOfAnt, boardWidth, boardHeight, eatX, eatY)
+  anthillY = req.params.anthillY
+  nbOfAnt  = req.params.nbOfAnts
+  mapSize  = req.params.mapSize
+  eatX     = req.params.eatX
+  eatY     = req.params.eatY
+  response.send game.createGame(anthillx,anthillY, nbOfAnt, mapSize, eatX, eatY)
 )
 
 app.get("/game/:id/status", (req,resp)->
