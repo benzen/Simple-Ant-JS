@@ -1,8 +1,8 @@
 class Board
   construct:(@width,@height,@anthillX,@anthillY,@eatX,@eatY)->
-    for row in @height
+    for row in [0..@height]
       @smell[row]=[]
-      for colon in @width
+      for colon in [0..@width]
         @smell[row][colon]=0
 
   ## snort a position
@@ -29,9 +29,9 @@ class Board
       else if x == @eatX and y == @eatY then return "E"
       else "#{@smell[x][y]}"
     map=[]
-    for row in @height
+    for row in [0..@height]
       map[row]=[]
-      for colon in @width
+      for colon in [0..@width]
        console.log("row #{row} colon #{colon}")
        map[row][colon]=caseToString(row,colon) 
     map
