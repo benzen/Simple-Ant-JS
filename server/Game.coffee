@@ -31,6 +31,7 @@ status = (gameId)->
   console.log("status")
   console.log("gameId #{gameId}")
   console.log("games #{games[gameId]}")
+  console.log("board #{games[gameId].board}")
   status = games[gameId].board.status()
   console.log status 
   status
