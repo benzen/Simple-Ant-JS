@@ -16,14 +16,13 @@ app.listen(port, ()->
 
 app.get('/createGame', (req, resp)->
   
-  anthillx = req.params.anthillX
-  anthillY = req.params.anthillY
-  nbOfAnt  = req.params.nbOfAnts
-  mapSize  = req.params.mapSize
-  eatX     = req.params.eatX
-  eatY     = req.params.eatY
-  for param in req.params
-    console.log("param #{param} #{req.params[param]}")
+  anthillx = req.query.anthillX
+  anthillY = req.query.anthillY
+  nbOfAnt  = req.query.nbOfAnts
+  mapSize  = req.query.mapSize
+  eatX     = req.query.eatX
+  eatY     = req.query.eatY
+  
   console.log("map size #{mapSize}")
   resp.send game.createGame(anthillx,anthillY, nbOfAnt, mapSize, eatX, eatY)
 )
