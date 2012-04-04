@@ -23,17 +23,18 @@ class Board
   ## make a path from a food place
   addSmell:(x,y)->
     @smell[x][y]=@smell[x][y]+1
+  
   caseToString:(x,y)->
       if x == @anthillX and y == @anthillY then return "A"
       else if x == @eatX and y == @eatY then return "E"
       else "#{@smell[x][y]}"  
-  status:->
-    
+  
+  status:->  
     map=[]
     for row in [0..@mapSize]
       map[row]=[]
       for column in [0..@mapSize]
-        map[row][column] = caseToString(row,column) 
+        map[row][column] = @caseToString(row,column) 
     map
       
   
