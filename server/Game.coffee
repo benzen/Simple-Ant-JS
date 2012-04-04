@@ -4,6 +4,7 @@ a = require "./ant"
 counter = 0
 incCounter = ->
   counter++
+  return counter
   
 games = []
 saveGame = (board, ants)->
