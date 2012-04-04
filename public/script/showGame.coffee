@@ -18,10 +18,10 @@ define ["lib/jquery"], ->
     drawCercle ctx, "#059863", 10, 18
 
   return {
-    showGame:->
+    showGame:(gameId)->
       $(".body").ready ->
         $(".body").load "showGame.html", ()->
-          $.ajax("game/2/status")
+          $.ajax("game/#{gameId}/status")
           drawGraph()
           
         
