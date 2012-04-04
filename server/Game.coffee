@@ -30,7 +30,7 @@ createGame = (anthillX,anthillY, nbOfAnt, boardWidth, boardHeight, eatX, eatY)->
 status = (gameId)->
   console.log("status")
   console.log("gameId #{gameId}")
-  console.log("games #{games}")
+  console.log("games #{games[gameId]}")
   status = games[gameId].board.status()
   console.log status 
   status
