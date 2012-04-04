@@ -15,8 +15,9 @@ app.listen(port, ()->
   console.log("Listening on " + port)
 )
 
-app.get('/createGame', (request, response)->
-  anthillx = 10
+app.get('/createGame', (req, response)->
+  
+  anthillx = req.params.anthillX
   anthillY = 10
   nbOfAnt = 1
   boardWidth = 20
