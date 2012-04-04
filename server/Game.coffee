@@ -12,6 +12,7 @@ saveGame = (board, ants)->
     "ants":ants
     "board":board
   }
+  console.log games[gameId]
 
 startGame=(gameId)->
   ants = games[gameId].ants
