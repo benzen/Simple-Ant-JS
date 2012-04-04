@@ -32,7 +32,7 @@ class Board
     for row in @height
       map[row]=[]
       for colon in @width
-        console.log("row #{row} colon #{colon}")
+       console.log("row #{row} colon #{colon}")
        map[row][colon]=caseToString(row,colon) 
     map
       
