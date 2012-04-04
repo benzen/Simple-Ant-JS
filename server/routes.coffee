@@ -1,5 +1,4 @@
 express = require('express')
-require('jade')
 game = require("./Game")
 
 
