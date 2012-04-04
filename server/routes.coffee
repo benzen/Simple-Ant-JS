@@ -15,7 +15,7 @@ app.listen(port, ()->
   console.log("Listening on " + port)
 )
 
-app.get('/createGame', (req, response)->
+app.get('/createGame', (req, resp)->
   
   anthillx = req.params.anthillX
   anthillY = req.params.anthillY
@@ -23,7 +23,8 @@ app.get('/createGame', (req, response)->
   mapSize  = req.params.mapSize
   eatX     = req.params.eatX
   eatY     = req.params.eatY
-  response.send game.createGame(anthillx,anthillY, nbOfAnt, mapSize, eatX, eatY)
+  console.log("map size #{mapSize}")
+  resp.send game.createGame(anthillx,anthillY, nbOfAnt, mapSize, eatX, eatY)
 )
 
 app.get("/game/:id/status", (req,resp)->
