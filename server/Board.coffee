@@ -1,13 +1,13 @@
 class Board
-  construct:(@width,@height,@anthillX,@anthillY,@eatX,@eatY)->
-    for row in [0..@height]
+  construct:(@mapSize, @anthillX,@anthillY,@eatX,@eatY)->
+    for row in [0..@mapSize]
       @smell[row]=[]
-      for colon in [0..@width]
+      for colon in [0..@mapSize]
         @smell[row][colon]=0
 
   ## snort a position
   snort:(x,y)->
-    if @height<x or @height<y
+    if @mapSize<x or @mapSize<y
       return "out of bounds"
     if x == @anthillX and y == @anthillY
       return "home"
@@ -29,9 +29,9 @@ class Board
       else if x == @eatX and y == @eatY then return "E"
       else "#{@smell[x][y]}"
     map=[]
-    for row in [0..@height]
+    for row in [0..@mapSize]
       map[row]=[]
-      for colon in [0..@width]
+      for colon in [0..@mapSize]
        console.log("row #{row} colon #{colon}")
        map[row][colon]=caseToString(row,colon) 
     map
