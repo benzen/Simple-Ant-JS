@@ -2,8 +2,13 @@ define ["lib/jquery"], ->
   cercleRadius = 5
   drawGraph =(data)->
     ctx = $("canvas").get(0).getContext("2d")
-    drawAnt ctx
-    drawPath ctx
+    [row,column, width, height, color] = [0,0, 10,10, "#985D05"]
+    for rowD in data
+      for columnD in row
+        drawRectangle ctx, color, row*width,column*height,height,width
+        column++
+      row++
+    
     
    drawCercle =(ctx, color, x,y)->
     ctx.fillStyle = color  
