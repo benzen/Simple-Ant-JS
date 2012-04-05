@@ -26,7 +26,7 @@ define ["lib/jquery"], ->
       $(".body").ready ->
         $(".body").load "showGame.html", ()->
           $.ajax("game/#{gameId}/status", {
-            success: (data)->drawGraph(data.content)
+            success: (data)->drawGraph(data)
           } )
           
         
