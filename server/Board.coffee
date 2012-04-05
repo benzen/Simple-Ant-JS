@@ -1,7 +1,7 @@
 class Board
   constructor:(@mapSize, @anthillX,@anthillY,@eatX,@eatY)->
     @smell=[]
-    for row in [0..@mapSize]
+    for row in [1..@mapSize]
       @smell[row]=[]
       for colon in [0..@mapSize]
         @smell[row][colon]=0
@@ -33,9 +33,9 @@ class Board
   
   status:->  
     map=[]
-    for row in [0..@mapSize]
+    for row in [1..@mapSize]
       map[row]=[]
-      for column in [0..@mapSize]
+      for column in [1..@mapSize]
         map[row][column] = @caseToString(row,column) 
     map
       

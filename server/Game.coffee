@@ -23,7 +23,7 @@ startGame=(gameId)->
 
 createGame = (anthillX,anthillY, nbOfAnt, mapSize, eatX, eatY)->
   board = new b.Board(mapSize, anthillX, anthillY, eatX, eatY)
-  ants = for times in [0..nbOfAnt]
+  ants = for times in [1..nbOfAnt]
     new a.Ant(anthillX,anthillY)
   "#{saveGame  board, ants}"
 
