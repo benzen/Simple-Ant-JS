@@ -11,7 +11,11 @@ define ["lib/jquery"], ->
     ctx.arc(x,y,cercleRadius,Math.PI*2,true)
     ctx.closePath()
     ctx.fill()
-
+   
+   drawRectangle = ( ctx, color, x, y, height, width ) ->
+    ctx.fillStyle = color
+    ctx.fillRect( x, y, height, width )
+   
    drawAnt = (ctx)->
     drawCercle ctx, "#985D05", 70,18
    drawPath = (ctx)->
@@ -21,8 +25,9 @@ define ["lib/jquery"], ->
     showGame:(gameId)->
       $(".body").ready ->
         $(".body").load "showGame.html", ()->
-          $.ajax("game/#{gameId}/status")
-          drawGraph()
+          $.ajax("game/#{gameId}/status", {
+            success: (data)->drawGraph(data.content)
+          } )
           
         
   }
