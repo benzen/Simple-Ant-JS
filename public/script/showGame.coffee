@@ -2,12 +2,10 @@ define ["lib/jquery"], ->
   cercleRadius = 5
   drawGraph =(data)->
     ctx = $("canvas").get(0).getContext("2d")
-    [row,column, width, height, color] = [0,0, 10,10, "#985D05"]
-    for rowD in data
-      for columnD in row
+    [width, height, color] = [0,0, 10,10, "#985D05"]
+    for row in [0..data.length]
+      for column in [0..data[row].length]
         drawRectangle ctx, color, row*width,column*height,height,width
-        column++
-      row++
     
     
    drawCercle =(ctx, color, x,y)->
