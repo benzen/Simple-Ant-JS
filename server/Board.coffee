@@ -25,7 +25,8 @@ class Board
     @smell[x][y]=@smell[x][y]+1
   
   caseToString:(x,y)->
-    console.log("anthillx is x #{@anthillX == x} anthily is y #{@anthillY == y}")
+    console.log "anthillx(#{@anthillX}) is x(#{x}) #{@anthillX == x}"
+    console.log "anthilly(#{@anthillY}) is y(#{y}) #{@anthillY == y}"
     if (x == @anthillX) and (y == @anthillY)
       return "A"
     else if (x == @eatX) and (y == @eatY)
