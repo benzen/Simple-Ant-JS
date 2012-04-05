@@ -1,6 +1,6 @@
 define ["lib/jquery"], ->
   cercleRadius = 5
-  drawGraph =->
+  drawGraph =(data)->
     ctx = $("canvas").get(0).getContext("2d")
     drawAnt ctx
     drawPath ctx
