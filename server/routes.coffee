@@ -15,12 +15,12 @@ app.listen(port, ()->
 )
 
 app.get('/createGame', (req, resp)->
-  anthillx = req.query.anthillX
-  anthillY = req.query.anthillY
-  nbOfAnt  = req.query.nbOfAnts
-  mapSize  = req.query.mapSize
-  eatX     = req.query.eatX
-  eatY     = req.query.eatY
+  anthillx = parseInt req.query.anthillX
+  anthillY = parseInt req.query.anthillY
+  nbOfAnt  = parseInt req.query.nbOfAnts
+  mapSize  = parseInt req.query.mapSize
+  eatX     = parseInt req.query.eatX
+  eatY     = parseInt req.query.eatY
   
   resp.send game.createGame(anthillx,anthillY, nbOfAnt, mapSize, eatX, eatY)
 )
