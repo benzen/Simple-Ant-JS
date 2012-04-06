@@ -11,7 +11,7 @@ define ["lib/jquery"], ->
       x: row*width
       y: column*height
       height: row
-      widht: column
+      width: column
     conf
   
   createMapConf = (data) ->
