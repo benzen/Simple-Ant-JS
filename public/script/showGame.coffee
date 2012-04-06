@@ -6,7 +6,13 @@ define ["lib/jquery"], ->
     return "\##{0x985d05+d}"
   dataToRectangleConfig = (row,column,smell)->
     [width, height] = [10,10]
-    [smellToColor( smell), row*width,column*height,row,column]
+    conf =
+      smell:smellToColor( smell)
+      x:row*width
+      y:column*height
+      height:row
+      widht:column
+    conf
   
   createMapConf = (data) ->
     mapConfig = []
@@ -20,7 +26,7 @@ define ["lib/jquery"], ->
   drawGraph =(data)->
     ctx = $("canvas").get(0).getContext("2d")
     ctx.scale(2,2)
-    createMapConf data
+    drawRectangle ctx conf[]for conf in createMapConf( data)
    
 
   drawRectangle = ( ctx, color, x, y, height, width ) ->
