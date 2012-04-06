@@ -4,7 +4,7 @@ define ["lib/jquery"], ->
     ctx = $("canvas").get(0).getContext("2d")
     [width, height, color] = [0,0, 10,10, "#985D05"]
     for row in [0..data.length-1]
-      for column in [0..(data[row].length -1)]
+      for column in [0..(data[row].length-1)]
         drawRectangle( ctx, color, row*width,column*height,height,width)
     
     
