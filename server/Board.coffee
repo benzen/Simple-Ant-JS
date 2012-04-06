@@ -33,9 +33,9 @@ class Board
   
   status:->  
     map=[]
-    for row in [1..@mapSize]
+    for row in [0..@mapSize]
       map[row]=[]
-      for column in [1..@mapSize]
+      for column in [0..@mapSize]
         map[row][column] = @caseToString(row,column) 
     map
       
