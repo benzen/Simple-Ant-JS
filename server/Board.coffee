@@ -1,7 +1,7 @@
 class Board
   constructor:(@mapSize, @anthillX,@anthillY,@eatX,@eatY)->
     @smell=[]
-    for row in [1..@mapSize]
+    for row in [0..@mapSize]
       @smell[row]=[]
       for colon in [0..@mapSize]
         @smell[row][colon]=0
