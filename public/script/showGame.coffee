@@ -1,9 +1,9 @@
 define ["lib/jquery"], ->
   cercleRadius = 5
   dataToColor = (d)->
-    if(d == "E") then return "red"
+    if d == "E" then return "red"
     if d == "A" then return "black"
-    return "#{0x985d05+d}"
+    return "\##{0x985d05+d}"
   drawGraph =(data)->
     ctx = $("canvas").get(0).getContext("2d")
     ctx.scale(2,2)
