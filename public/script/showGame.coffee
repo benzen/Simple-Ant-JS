@@ -5,7 +5,7 @@ define ["lib/jquery"], ->
     if d == "A" then return "black"
     return "\##{0x985d05+d}"
   dataToRectangleConfig = (row,column,smell)->
-    [smellToColor( sell), row*width,column*height,row,column]
+    [smellToColor( smell), row*width,column*height,row,column]
   
   createMapConf = (data) ->
     [width, height] = [10,10]
