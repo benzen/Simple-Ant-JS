@@ -10,8 +10,8 @@ define ["lib/jquery"], ->
       color: smellToColor( smell)
       x: row*width
       y: column*height
-      width: row
-      height: column
+      width: width
+      height: height
     conf
   
   createMapConf = (data) ->
