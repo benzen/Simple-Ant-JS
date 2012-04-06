@@ -3,7 +3,7 @@ define ["lib/jquery"], ->
   smellToColor = (d)->
     if d == "E" then return "red"
     if d == "A" then return "black"
-    return "\##{0x985d05+d}"
+    return "\##{(parseInt(0x985d05)+parseInt(d)).toString(16)}"
   dataToRectangleConfig = (smell,row,column)->
     [width, height] = [10,10]
     conf =
