@@ -16,10 +16,13 @@ define ["lib/jquery"], ->
   
   createMapConf = (data) ->
     mapConfig = []
+    [x,y]=[0,0]
     for row in data
       for cell in row
         smell = cell
-        mapConfig.push dataToRectangleConfig( smell, (data.indexOf row), (row.indexOf cell) )
+        mapConfig.push dataToRectangleConfig( smell, x, y )
+        x++
+      y++
     mapConfig  
    
 
