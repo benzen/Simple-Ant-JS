@@ -21,8 +21,8 @@ define ["lib/jquery"], ->
       for cell in row
         smell = cell
         mapConfig.push dataToRectangleConfig( smell, x, y )
-        x++
-      y++
+        y++
+      x++
     mapConfig  
    
 
