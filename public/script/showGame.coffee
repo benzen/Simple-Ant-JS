@@ -17,7 +17,7 @@ define ["lib/jquery"], ->
   createMapConf = (data) ->
     mapConfig = []
     for row in data
-      for cell in column
+      for cell in row
         smell = cell
         mapConfig.push dataToRectangleConfig( smell, (data.indexOf row), (row.indexOf cell) )
     mapConfig  
