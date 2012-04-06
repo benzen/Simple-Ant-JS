@@ -9,11 +9,13 @@ define ["lib/jquery"], ->
     [smellToColor( smell), row*width,column*height,row,column]
   
   createMapConf = (data) ->
-    mapConfig = for column in data
+    mapConfig = []
+    for column in data
       for cell in column
         smell = cell
-        dataToRectangleConfig smell, (column.indexOf cell), (data.indexOf column)
-   flatten mapConfig,true
+        mapConfig.push dataToRectangleConfig( smell, (column.indexOf cell), (data.indexOf column))
+    mapConfig  
+   
 
   drawGraph =(data)->
     ctx = $("canvas").get(0).getContext("2d")
