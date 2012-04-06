@@ -13,11 +13,7 @@ define ["lib/jquery"], ->
       for cell in column
         smell = cell
         dataToRectangleConfig smell, (column.indexOf cell), (data.indexOf column)
-  
-#    mapConf = for row in [0..data.length-1]
-#      for column in [0..(data[row].length-1)]
-#        smell = data[row][column]
-#        dataToRectangleConfig smell, row, column
+   flatten mapConfig,true
 
   drawGraph =(data)->
     ctx = $("canvas").get(0).getContext("2d")
