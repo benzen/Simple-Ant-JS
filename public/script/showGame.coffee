@@ -6,7 +6,7 @@ define ["lib/jquery"], ->
     return "#{0x985d05+d}"
   drawGraph =(data)->
     ctx = $("canvas").get(0).getContext("2d")
-    ctx.scale(10,10)
+    ctx.scale(2,2)
     [width, height, color] = [10,10, "#985D05"]
     for row in [0..data.length-1]
       for column in [0..(data[row].length-1)]
