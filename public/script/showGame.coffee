@@ -4,7 +4,7 @@ define ["lib/jquery"], ->
     if d == "E" then return "red"
     if d == "A" then return "black"
     return "\##{0x985d05+d}"
-  dataToRectangleConfig = (row,column,smell)->
+  dataToRectangleConfig = (smell,row,column)->
     [width, height] = [10,10]
     conf =
       smell: smellToColor( smell)
