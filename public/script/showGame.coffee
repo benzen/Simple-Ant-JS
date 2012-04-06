@@ -7,26 +7,26 @@ define ["lib/jquery"], ->
   dataToRectangleConfig = (smell,row,column)->
     [width, height] = [10,10]
     conf =
-      smell: smellToColor( smell)
+      color: smellToColor( smell)
       x: row*width
       y: column*height
-      height: row
-      width: column
+      width: row
+      height: column
     conf
   
   createMapConf = (data) ->
     mapConfig = []
-    for column in data
+    for row in data
       for cell in column
         smell = cell
-        mapConfig.push dataToRectangleConfig( smell, (column.indexOf cell), (data.indexOf column))
+        mapConfig.push dataToRectangleConfig( smell, (data.indexOf row), (row.indexOf cell) )
     mapConfig  
    
 
   drawGraph =(data)->
     ctx = $("canvas").get(0).getContext("2d")
     ctx.scale(2,2)
-    drawRectangle( ctx, conf.smell, conf.x,conf.y, conf.width, conf.height) for conf in createMapConf( data)
+    drawRectangle( ctx, conf.color, conf.x,conf.y, conf.width, conf.height) for conf in createMapConf( data)
    
 
   drawRectangle = ( ctx, color, x, y, height, width ) ->
