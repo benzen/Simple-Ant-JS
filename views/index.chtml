@@ -1,5 +1,5 @@
- h1 @title
-  form method: 'post', action: 'login', ->
-    textbox id: 'username'
-    textbox id: 'password'
-    button @title
+head ->                     
+    title 'Hello World'
+body ->
+    div id:"ugly-box", style:"width:90px, height:90px,
+         background-color: purple, border: 5px green"
