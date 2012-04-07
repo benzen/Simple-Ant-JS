@@ -1,0 +1,10 @@
+html ->
+  head ->
+    title 'coffeekup demo'
+  body ->
+    div id: 'header', ->
+      h3 'Muppet Crew'
+    div id: 'wrap',
+      -> @render @content, @context
+    div id: 'header', ->
+      p 'Powered with Meryl!'
