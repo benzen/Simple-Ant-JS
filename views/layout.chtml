@@ -1,8 +1,10 @@
 html ->
   head ->
-    title 'coffeekup demo'
+    title 'SimpleJsAnt'
+    link rel:"stylesheet" type:"text/css" href:"css/main.css"
   body ->
-    div id: 'header', ->
-      h3 'Muppet Crew'
-    div id: 'header', ->
-      p 'Powered with Meryl!'
+    div class:"title"->
+        div class:"title-element" id:"mainPage" ->
+            "SimpleJsAnt"
+        div class:"title-element" id:"newGame" ->
+            "new game"
