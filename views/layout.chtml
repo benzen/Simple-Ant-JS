@@ -1,7 +1,7 @@
 html ->
   head ->
     title 'SimpleJsAnt'
-    link rel:"stylesheet" type:"text/css" href:"css/main.css"
+    link rel:"stylesheet", type:"text/css", href:"css/main.css"
   body ->
     div class:"title"->
         div class:"title-element" id:"mainPage" ->
