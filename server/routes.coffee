@@ -8,6 +8,8 @@ app = express.createServer express.logger()
 app.configure(->  
   app.use( express.static(__dirname + '/../public') )  
 )
+app.set 'view engine', 'coffee'
+app.register '.chtml', require('coffeecup').adapters.express
 
 port = process.env.PORT || 3000;
 app.listen(port, ()->
@@ -30,3 +32,6 @@ app.get("/game/:id/status", (req,resp)->
   
   resp.send game.status(req.params.id)
 )
+app.get '/', (req, res) ->
+  # Will render views/index.coffee:
+  res.render 'index', foo: 'bar'
