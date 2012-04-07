@@ -9,7 +9,7 @@ app.configure(->
   app.use( express.static(__dirname + '/../public') )  
 )
 app.set 'view engine', 'chtml'
-app.register '.chtml', require('coffeecup').adapters.express
+app.register '.chtml', require('coffeekup').adapters.express
 
 port = process.env.PORT || 3000;
 app.listen(port, ()->
