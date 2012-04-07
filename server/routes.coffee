@@ -5,9 +5,7 @@ game = require("./Game")
 
 app = express.createServer express.logger()
 
-app.configure(->  
-  app.use( express.static(__dirname + '/../public') )  
-)
+
 app.set 'view engine', 'chtml'
 app.register '.chtml', require('coffeekup').adapters.express
 
@@ -35,3 +33,7 @@ app.get("/game/:id/status", (req,resp)->
 app.get '/', (req, res) ->
   # Will render views/index.coffee:
   res.render 'index', foo: 'bar'
+  
+app.configure(->  
+  app.use( express.static(__dirname + '/../public') )  
+)  
