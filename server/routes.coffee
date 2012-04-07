@@ -8,7 +8,7 @@ app = express.createServer express.logger()
 app.configure(->  
   app.use( express.static(__dirname + '/../public') )  
 )
-app.set 'view engine', 'coffee'
+app.set 'view engine', 'chtml'
 app.register '.chtml', require('coffeecup').adapters.express
 
 port = process.env.PORT || 3000;
