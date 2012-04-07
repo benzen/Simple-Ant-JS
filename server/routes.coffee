@@ -32,7 +32,7 @@ app.get("/game/:id/status", (req,resp)->
 )
 app.get '/', (req, res) ->
   # Will render views/index.coffee:
-  res.render 'index', foo: 'bar'
+  res.render 'index'
   
 app.configure(->  
   app.use( express.static(__dirname + '/../public') )  
