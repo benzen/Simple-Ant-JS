@@ -12,7 +12,7 @@ app.listen(port, ()->
   console.log("Listening on " + port)
 )
 
-app.post('/createGame', (req, resp)->
+app.post('/createGame', (req, res)->
   console.info "/createGame"
   b = req.body
   params = [b.anthillX, b.anthillY, b.nbOfAnt, b.mapSize, b.eatX, b.eatY]
@@ -28,14 +28,14 @@ app.post('/createGame', (req, resp)->
   """
   gameId = game.createGame(anthillX,anthillY, nbOfAnt, mapSize, eatX, eatY)
   game.startGame gameId
-  resp.redirect "/game/#{gameId}/status"
+  res.redirect "/game/#{gameId}/status"
 )
 
-app.get("/game/:id/status", (req,resp)->
+app.get("/game/:id/status", (req,res)->
   console.info "/game/id/status"
   gameId = req.params.id
   console.info "param id #{gameId}"
-  render "gameStatus", game.status(gameId)
+  res.render "gameStatus", game.status(gameId)
 )
 app.get '/', (req, res) ->
   console.log "/index"
