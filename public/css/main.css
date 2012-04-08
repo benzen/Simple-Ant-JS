@@ -10,6 +10,7 @@
     border-radius: 10px;
     font-size:larger;
     text-decoration: none;
+    color:black;
 }
 .title-element:hover{
     color:white;
