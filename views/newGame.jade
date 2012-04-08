@@ -2,27 +2,28 @@ extends layout
 block content
     .bodyText
         center
-            table
-                tr
-                    td Number of Ants:
-                    td 
-                        input(type="number").spinner #nbOfAnts
-                tr
-                    td Size of the Map( squared map):
-                    td 
-                        input(type="number").spinner#mapSize
-                tr
-                    td Position of the eat X:
-                    td 
-                        input(type="number").spinner#eatX
-                    td Y:
-                    td 
-                        input(type="number").spinner#eatY
-                tr
-                    td Position of the anthill X:
-                    td 
-                        input(type="number").spinner#anthillX
-                    td Y:
-                    td 
-                        input(type="number").spinner#anthillY
-            a(href="createGame").button Start
+            form (name="newGame" action="createGame)
+                table
+                    tr
+                        td Number of Ants:
+                        td 
+                                input(type="number", name="nbOfAnts").spinner 
+                    tr
+                        td Size of the Map( squared map):
+                        td 
+                            input(type="number", name="mapSize").spinner
+                    tr
+                        td Position of the eat X:
+                        td 
+                            input(type="number", name="eatX").spinner
+                        td Y:
+                        td 
+                            input(type="number", name="eatY").spinner
+                    tr
+                        td Position of the anthill X:
+                        td 
+                            input(type="number", name="anthillX").spinner
+                        td Y:
+                        td 
+                            input(type="number", name="anthillY").spinner
+                a(href="createGame", onclick="newGame.submit()").button Start
