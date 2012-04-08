@@ -3,7 +3,9 @@ html
   head
     title SimpleJsAnt
     link(rel="stylesheet", type="text/css", href="css/main.css")
-    script(src="script/lib/jquery.js")
+    block scripts
+        script(src='/script/lib/jquery.js')
+        script(scr='script/lib/coffeescript.js')
   body
     div.title
         a.title-element(href="/") SimpleJsAnt

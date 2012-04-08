@@ -1,7 +1,5 @@
 extends layout
-block scripts
-  script(src='/script/lib/jquery.js')
-  script(scr='script/lib/coffeescript.js')
+block append scripts
   script(src='/script/newGame.coffee')
 block content
     .bodyText
