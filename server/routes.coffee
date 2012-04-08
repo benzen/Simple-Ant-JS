@@ -6,8 +6,7 @@ game = require("./Game")
 app = express.createServer express.logger()
 
 
-app.set 'view engine', 'chtml'
-app.register '.chtml', require('coffeekup').adapters.express
+app.set 'view engine', 'jade'
 
 port = process.env.PORT || 3000;
 app.listen(port, ()->
