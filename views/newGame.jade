@@ -3,11 +3,6 @@ block append scripts
   script(src='/script/newGame.coffee', type="text/coffeescript")
 block content
     .bodyText
-        script
-                alert("dom is ready");
-                $('#start').click(function() {
-                    $('form:first').submit();
-                });
         center
             form(name="newGame",action="createGame",method="POST")
                 table

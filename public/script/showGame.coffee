@@ -22,7 +22,7 @@ define ["lib/jquery"], ->
         smell = cell
         mapConfig.push dataToRectangleConfig( smell, x, y )
         x++
-      x=0
+      xl=0
       y++
     mapConfig  
    
