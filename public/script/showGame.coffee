@@ -3,6 +3,7 @@ smellToColor = (d)->
   if d == "E" then return "red"
   if d == "A" then return "black"
   return "\##{(parseInt(0x985d05)+parseInt(d)).toString(16)}"
+  
 dataToRectangleConfig = (smell,row,column)->
   [width, height] = [10,10]
   conf =
@@ -26,7 +27,7 @@ createMapConf = (data) ->
   mapConfig  
    
 
-drawGraph =(data)->
+renderGame = (data)->
   ctx = $("canvas").get(0).getContext("2d")
   ctx.scale(2,2)
   drawRectangle( ctx, conf.color, conf.x,conf.y, conf.width, conf.height) for conf in createMapConf( data)
@@ -42,9 +43,8 @@ drawCercle =(ctx, color, x,y)->
   ctx.arc(x,y,cercleRadius,Math.PI*2,true)
   ctx.closePath()
   ctx.fill() 
+  
 drawAnt = (ctx)->
   drawCercle ctx, "#985D05", 70,18
   drawPath = (ctx)->
       drawCercle ctx, "#059863", 10, 18
-
-drawGraph(data)
