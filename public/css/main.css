@@ -36,13 +36,13 @@ body {
     padding:10px;    
 }
 .button{
-    display:inline;
+    display:inline-block;
     border-radius:10px;
     padding:5px;
     background-color:#215ec7;
     color:#45402A;
     text-decoration: none;
-    margin-top: 10px;
+    margin: 5px;
 }
 .button:hover {
     color:white;
