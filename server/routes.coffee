@@ -31,9 +31,10 @@ app.get("/game/:id/status", (req,resp)->
   resp.send game.status(req.params.id)
 )
 app.get '/', (req, res) ->
-  # Will render views/index.coffee:
   res.render 'index'
-  
+
+app.get "/newGame", (req,res)->
+  res.render "newGame"
 app.configure(->  
   app.use( express.static(__dirname + '/../public') )  
 )  
