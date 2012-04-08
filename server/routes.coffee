@@ -16,7 +16,6 @@ app.post('/createGame', (req, resp)->
   console.info "/createGame"
   b = req.body
   params = [b.anthillX, b.anthillY, b.nbOfAnt, b.mapSize, b.eatX, b.eatY]
-  console.log params
   [anthillX, anthillY, nbOfAnt, mapSize,eatX, eatY] = _.map(params,parseInt)
   console.info """ 
   params
