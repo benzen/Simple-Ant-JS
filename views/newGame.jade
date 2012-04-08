@@ -1,13 +1,6 @@
 extends layout
 block content
     .bodyText
-        script(type="text/coffeescript")
-            $().ready ->
-                $(".spinner").attr("value",0)
-                $(".spinner").attr("min",0)
-                $(".spinner").attr("max",100)
-                $(".spinner").attr("width",20)
-
         center
             form(name="newGame" action="createGame)
                 table
