@@ -19,14 +19,14 @@ app.post('/createGame', (req, resp)->
   [anthillX, anthillY, nbOfAnt, mapSize,eatX, eatY] = _.map(params,parseInt)
   console.info """ 
   params
-    anthillx #{anthillx},
+    anthillX #{anthillX},
     anthillY #{anthillY},
     nbOfAnt #{nbOfAnt},
     mapSize #{mapSize},
     eatX #{eatX},
     eatY #{eatY}
   """
-  resp.send game.createGame(anthillx,anthillY, nbOfAnt, mapSize, eatX, eatY)
+  resp.send game.createGame(anthillX,anthillY, nbOfAnt, mapSize, eatX, eatY)
 )
 
 app.get("/game/:id/status", (req,resp)->
