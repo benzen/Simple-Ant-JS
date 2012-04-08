@@ -28,7 +28,7 @@ app.post('/createGame', (req, resp)->
   """
   gameId = game.createGame(anthillX,anthillY, nbOfAnt, mapSize, eatX, eatY)
   game.startGame gameId
-  redirect "/game/#{gameId}/status"
+  res.redirect "/game/#{gameId}/status"
 )
 
 app.get("/game/:id/status", (req,resp)->
