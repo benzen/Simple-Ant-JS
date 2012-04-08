@@ -13,7 +13,9 @@ app.listen(port, ()->
 
 app.post('/createGame', (req, resp)->
   console.info "/createGame"
-  [anthillx, anthillY, nbOfAnt, mapSize,eatX, eatY] = _.map([req.body],parseInt)
+  b = req.body
+  params = [b.anthillX,b.anthillY, b.nbOfAnt, b.mapSize, b.eatX, b.eatY]
+  [anthillx, anthillY, nbOfAnt, mapSize,eatX, eatY] = _.map(params,parseInt)
   console.info """ 
   params
     anthillx #{anthillx},
