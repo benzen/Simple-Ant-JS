@@ -27,14 +27,15 @@ app.post('/createGame', (req, resp)->
     eatY #{eatY}
   """
   gameId = game.createGame(anthillX,anthillY, nbOfAnt, mapSize, eatX, eatY)
-  resp.send render "/game/#{gameId}/status"
+  game.startGame gameId
+  redirect "/game/#{gameId}/status"
 )
 
 app.get("/game/:id/status", (req,resp)->
   console.info "/game/id/status"
-  console.info "param id #{req.params.id}"
-  game.startGame req.params.id
-  resp.send game.status(req.params.id)
+  gameId = req.params.id
+  console.info "param id #{gameId}"
+  render "gameStatus", game.status(gameId)
 )
 app.get '/', (req, res) ->
   console.log "/index"
