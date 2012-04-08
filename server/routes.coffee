@@ -21,7 +21,7 @@ app.get('/createGame', (req, resp)->
   mapSize  = parseInt req.query.mapSize
   eatX     = parseInt req.query.eatX
   eatY     = parseInt req.query.eatY
-  console.log( """
+  console.log """
   anthillx #{anthillx},
   anthillY #{anthillY},
   nbOfAnt #{nbOfAnt},
