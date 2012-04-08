@@ -2,12 +2,10 @@ extends layout
 block content
     .bodyText
         script
-            $.ready(function(){
                 alert("dom is ready");
                 $('#start').click(function() {
                     $('form:first').submit();
                 });
-            });
         center
             form(name="newGame",action="createGame",method="POST")
                 table
