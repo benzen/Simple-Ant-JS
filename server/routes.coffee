@@ -1,4 +1,5 @@
 express = require('express')
+_ = require("underscore")
 game = require("./Game")
 
 app = express.createServer express.logger()
@@ -12,12 +13,7 @@ app.listen(port, ()->
 
 app.post('/createGame', (req, resp)->
   console.info "/createGame"
-  anthillx = parseInt req.query.anthillX
-  anthillY = parseInt req.query.anthillY
-  nbOfAnt  = parseInt req.query.nbOfAnts
-  mapSize  = parseInt req.query.mapSize
-  eatX     = parseInt req.query.eatX
-  eatY     = parseInt req.query.eatY
+  [anthillx, anthillY, nbOfAnt, mapSize,eatX, eatY] = _.map([req.body],parseInt)
   console.info """ 
   params
     anthillx #{anthillx},
