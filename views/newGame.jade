@@ -1,9 +1,6 @@
 extends layout
 block content
     .bodyText
-        script
-            var form  = $('form').first();
-            form.submit();
         center
             form(name="newGame",action="createGame",method="POST")
                 table
@@ -29,4 +26,4 @@ block content
                         td Y:
                         td 
                             input(type="number", name="anthillY").spinner
-                a(href="createGame", onclick="submitForm()").button Start
+                a(href="createGame", onclick="document.newGame.submit()").button Start
