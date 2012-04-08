@@ -2,8 +2,10 @@ extends layout
 block content
     .bodyText
         script
-            $('#start').click(function() {
-                $('form:first').submit();
+            $.ready(function(){
+                $('#start').click(function() {
+                    $('form:first').submit();
+                });
             });
         center
             form(name="newGame",action="createGame",method="POST")
