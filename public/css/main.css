@@ -41,6 +41,7 @@ body {
     padding:5px;
     background-color:#215ec7;
     color:#45402A;
+    text-decoration: none;
 }
 .button:hover {
     color:white;
