@@ -1,7 +1,7 @@
 extends layout
 block content
     .bodyText
-        script
+        script(type="text/coffeescript")
             $().ready ->
                 $(".spinner").attr("value",0)
                 $(".spinner").attr("min",0)
