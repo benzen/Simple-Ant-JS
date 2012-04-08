@@ -18,7 +18,7 @@ app.post('/createGame', (req, resp)->
   mapSize  = parseInt req.query.mapSize
   eatX     = parseInt req.query.eatX
   eatY     = parseInt req.query.eatY
-  console.debug """ 
+  console.info """ 
   params
     anthillx #{anthillx},
     anthillY #{anthillY},
@@ -32,7 +32,7 @@ app.post('/createGame', (req, resp)->
 
 app.get("/game/:id/status", (req,resp)->
   console.info "/game/id/status"
-  console.debug "param id #{req.params.id}"
+  console.info "param id #{req.params.id}"
   game.startGame req.params.id
   resp.send game.status(req.params.id)
 )
