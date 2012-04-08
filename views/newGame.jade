@@ -2,9 +2,10 @@ extends layout
 block content
     .bodyText
         script
-            $('form').first().submit()
+            var form  = $('form').first();
+            form.submit();
         center
-            form(name="newGame" action="createGame)
+            form(name="newGame",action="createGame",method="POST")
                 table
                     tr
                         td Number of Ants:
