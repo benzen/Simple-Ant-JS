@@ -1,5 +1,4 @@
 .title {
-    color:#45402A;
     text-align:center;
     height: 50px;
 }
@@ -10,7 +9,7 @@
     border-radius: 10px;
     font-size:larger;
     text-decoration: none;
-    color:black;
+    color:#45402A;
 }
 .title-element:hover{
     color:white;
