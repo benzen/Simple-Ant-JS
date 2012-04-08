@@ -3,6 +3,7 @@ block content
     .bodyText
         script
             $.ready(function(){
+                alert("dom is ready");
                 $('#start').click(function() {
                     $('form:first').submit();
                 });
