@@ -4,29 +4,3 @@ $(".spinner").attr("max",100)
 $(".spinner").attr("width",20)
 
 $('#start').click ->$('form:first').submit()
-
-###
-define ["lib/jquery","cs!showGame"], (jquery,showGame) ->
-    initSpinners = ->
-    initButtons = ->
-        $(".start").click -> 
-          $.ajax {
-            url:"createGame"
-            success:(data)-> showGame.showGame data
-            data:{
-                nbOfAnt: $("#nbOfAnts").val()
-                anthillX: $("#anthillX").val()
-                anthillY: $("#anthillY").val()
-                eatX: $("#eatX").val()
-                eatY: $("#eatY").val()
-                mapSize: $("#mapSize").val()
-              }
-            }
-            
-    return {
-        init: ->
-            $().ready ->
-                initSpinners()
-                initButtons()
-    }
-###
