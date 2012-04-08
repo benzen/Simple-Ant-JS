@@ -7,6 +7,7 @@ app = express.createServer express.logger()
 
 
 app.set 'view engine', 'jade'
+app.set 'view options', { layout: false }
 
 port = process.env.PORT || 3000;
 app.listen(port, ()->

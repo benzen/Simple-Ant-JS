@@ -1,5 +1,0 @@
-head ->                     
-    title 'Hello World'
-body ->
-    div id:"ugly-box", style:"width:90px, height:90px,
-         background-color: purple, border: 5px green"
