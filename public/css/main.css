@@ -9,6 +9,7 @@
     padding:10px;
     border-radius: 10px;
     font-size:larger;
+    text-decoration: none;
 }
 .title-element:hover{
     color:white;
