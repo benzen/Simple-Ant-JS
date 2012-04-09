@@ -28,9 +28,11 @@ createMapConf = (data) ->
    
 
 renderGame = (data)->
-  ctx = $("canvas").get(0).getContext("2d")
-  ctx.scale(2,2)
-  drawRectangle( ctx, conf.color, conf.x,conf.y, conf.width, conf.height) for conf in createMapConf( data)
+  console.log "renderGame"
+  consolg.log data
+#  ctx = $("canvas").get(0).getContext("2d")
+#  ctx.scale(2,2)
+#  drawRectangle( ctx, conf.color, conf.x,conf.y, conf.width, conf.height) for conf in createMapConf( data)
    
 
 drawRectangle = ( ctx, color, x, y, height, width ) ->
