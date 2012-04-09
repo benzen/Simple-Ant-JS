@@ -1,3 +1,3 @@
-require(["cs!mainPage"],function(mainPage){
-    mainPage();
-});
+//require(["cs!mainPage"],function(mainPage){
+//    mainPage();
+//});
