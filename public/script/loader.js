@@ -1,3 +1,3 @@
-//require(["cs!mainPage"],function(mainPage){
-//    mainPage();
-//});
+require(['/script/lib/jquery.js',
+         '/script/cs.js'],function(){
+});
