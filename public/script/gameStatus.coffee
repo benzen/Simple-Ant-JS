@@ -28,7 +28,7 @@ createMapConf = (data) ->
    
 
 renderGameStatus = (data)->
-  console.log "renderGame"
+  console.log "renderGameStatus"
   consolg.log data
   ctx = $("canvas").get(0).getContext("2d")
   ctx.scale(2,2)
