@@ -36,7 +36,7 @@ app.get("/game/:id/status", (req,res)->
   gameId = req.params.id
   gameStatus = game.status(gameId)
   console.info "param id #{gameId}"
-  res.render "gameStatus"
+  res.render "gameStatus", {gameStatus: s}
 )
 app.get '/', (req, res) ->
   console.log "/index"
