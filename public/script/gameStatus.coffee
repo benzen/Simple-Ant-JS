@@ -44,8 +44,6 @@ define ()->
         drawCercle ctx, "#059863", 10, 18
 
   renderGameStatus = (data)->
-    console.log "renderGameStatus"
-    console.log data
     ctx = $("canvas").get(0).getContext("2d")
     ctx.scale(2,2)
     drawRectangle( ctx, conf.color, conf.x,conf.y, conf.width, conf.height) for conf in createMapConf( data)
