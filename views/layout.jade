@@ -6,6 +6,8 @@ html
     block scripts
         script(src='/script/lib/jquery.js')
         script(src='/script/lib/coffeescript.js')
+        script(src='/script/lib/require.js', data-main="/scripts/loader")
+        script(src='/script/cs.js')
   body
     div.title
         a.title-element(href="/") SimpleJsAnt
