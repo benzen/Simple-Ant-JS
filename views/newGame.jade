@@ -1,6 +1,7 @@
 extends layout
 block append scripts
-  script(src='/script/newGame.coffee', type="text/coffeescript")
+  script
+    require('cs!/script/newGame.coffee');
 block content
     .bodyText
         center
