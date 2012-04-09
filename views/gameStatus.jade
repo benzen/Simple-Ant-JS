@@ -2,7 +2,7 @@ extends layout
 block append scripts
     script(src='/script/gameStatus.coffee', type="text/coffeescript")
     script
-        $.ready(function(){
+        $(document).ready(function(){
             renderGameStatus( !{gameStatus});
         });
     
