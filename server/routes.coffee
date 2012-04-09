@@ -34,9 +34,8 @@ app.post('/createGame', (req, res)->
 app.get("/game/:id/status", (req,res)->
   console.info "/game/id/status"
   gameId = req.params.id
-  gameStatus = JSON.stringify( game.status(gameId) )
   console.info "param id #{gameId}"
-  console.info "result #{gameStatus}"
+  gameStatus = JSON.stringify( game.status(gameId) )
   res.render "gameStatus", {gameStatus: gameStatus }
 )
 app.get '/', (req, res) ->

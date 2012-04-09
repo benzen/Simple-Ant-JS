@@ -25,15 +25,6 @@ createMapConf = (data) ->
     x=0
     y++
   mapConfig  
-   
-
-renderGameStatus = (data)->
-  console.log "renderGameStatus"
-  consolg.log data
-  ctx = $("canvas").get(0).getContext("2d")
-  ctx.scale(2,2)
-  drawRectangle( ctx, conf.color, conf.x,conf.y, conf.width, conf.height) for conf in createMapConf( data)
-   
 
 drawRectangle = ( ctx, color, x, y, height, width ) ->
   ctx.fillStyle = color
@@ -50,3 +41,10 @@ drawAnt = (ctx)->
   drawCercle ctx, "#985D05", 70,18
   drawPath = (ctx)->
       drawCercle ctx, "#059863", 10, 18
+
+renderGameStatus = (data)->
+  console.log "renderGameStatus"
+  consolg.log data
+  ctx = $("canvas").get(0).getContext("2d")
+  ctx.scale(2,2)
+  drawRectangle( ctx, conf.color, conf.x,conf.y, conf.width, conf.height) for conf in createMapConf( data)
