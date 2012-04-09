@@ -1,8 +1,8 @@
 extends layout
 block append scripts
-    script(src='/script/gameStatus', type="text/coffeescript")
+###    script(src='/script/gameStatus.coffee', type="text/coffeescript")
     script
-        require(["cs!/script/gameStatus.coffee"],function(){
+        require(["cs!/script/gameStatus"],function(){
             renderGameStatus( !{gameStatus});
         });
     
