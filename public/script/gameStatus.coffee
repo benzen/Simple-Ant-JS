@@ -41,7 +41,7 @@ define ()->
   drawAnt = (ctx)->
     color = 'white'
     drawCercle ctx, color, 1, 10, 5
-    drawCercle ctx, color, 1, 14, 2
+    drawCercle ctx, color, 1, 14, 3
     drawCercle ctx, color, 1, 20, 5
 
   drawPath = (ctx)->
