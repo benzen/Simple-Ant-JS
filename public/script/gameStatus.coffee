@@ -39,10 +39,10 @@ define ()->
     ctx.fill()
 
   drawAnt = (ctx)->
-    [color,x,y, radius]=['white',1, 1, 2]
+    [color,x,y, radius]=['white',1, 1, 5]
     drawCercle ctx, color, x, y, radius
-    drawCercle ctx, color, x, y+6, radius-1
-    drawCercle ctx, color, x, y+12, radius
+    drawCercle ctx, color, x, y+radius+1, radius-2
+    drawCercle ctx, color, x, y+2*radius, radius
 
   drawPath = (ctx)->
     drawCercle ctx, "#059863", 10, 18
