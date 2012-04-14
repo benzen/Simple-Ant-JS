@@ -42,7 +42,7 @@ define ()->
     color = 'white'
     drawCercle ctx, color, 1, 10, 5
     drawCercle ctx, color, 1, 14, 3
-    drawCercle ctx, color, 1, 20, 5
+    drawCercle ctx, color, 1, 22, 5
 
   drawPath = (ctx)->
     drawCercle ctx, "#059863", 10, 18
