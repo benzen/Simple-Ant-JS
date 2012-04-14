@@ -34,7 +34,7 @@ define ()->
   drawCercle = (ctx, color, x,y, radius=cercleRadius)->
     ctx.fillStyle = color
     ctx.beginPath()
-    ctx.arc(x,y,radius,Math.PI*2,true)
+    ctx.arc(x,y,radius,0,Math.PI*2)
     ctx.closePath()
     ctx.fill()
 
@@ -45,7 +45,7 @@ define ()->
     drawCercle ctx, color, 1, 19, 5
 
   drawPath = (ctx)->
-        drawCercle ctx, "#059863", 10, 18
+    drawCercle ctx, "#059863", 10, 18
 
   renderGameStatus = (data)->
     ctx = $("canvas").get(0).getContext("2d")
