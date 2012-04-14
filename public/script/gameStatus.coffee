@@ -31,15 +31,18 @@ define ()->
     ctx.fillStyle = color
     ctx.fillRect( x, y, height, width )
 
-  drawCercle = (ctx, color, x,y)->
+  drawCercle = (ctx, color, x,y, radius=cercleRadius)->
     ctx.fillStyle = color
     ctx.beginPath()
-    ctx.arc(x,y,cercleRadius,Math.PI*2,true)
+    ctx.arc(x,y,radius,Math.PI*2,true)
     ctx.closePath()
     ctx.fill()
 
   drawAnt = (ctx)->
-    drawCercle ctx, "#985D05", 70,18
+    drawCercle ctx, "#985D05", 1, 10, 5
+    drawCercle ctx, "#985D05", 1, 17, 2
+    drawCercle ctx, "#985D05", 1, 19, 5
+
   drawPath = (ctx)->
         drawCercle ctx, "#059863", 10, 18
 
