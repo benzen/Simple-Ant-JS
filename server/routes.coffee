@@ -17,7 +17,7 @@ app.post('/createGame', (req, res)->
   b = req.body
   params = [b.anthillX, b.anthillY, b.nbOfAnt, b.mapSize, b.eatX, b.eatY]
   [anthillX, anthillY, nbOfAnt, mapSize,eatX, eatY] = _.map(params,(v,i,l)->parseInt(v))
-  console.info """ 
+  console.info """
   params
     anthillX #{anthillX},
     anthillY #{anthillY},
@@ -35,6 +35,7 @@ app.get("/game/:id/status", (req,res)->
   console.info "/game/id/status"
   gameId = req.params.id
   console.info "param id #{gameId}"
+  unless game then res.redirect "/newGame"
   gameStatus = JSON.stringify( game.status(gameId) )
   res.render "gameStatus", {gameStatus: gameStatus }
 )
@@ -45,7 +46,7 @@ app.get '/', (req, res) ->
 app.get "/newGame", (req,res)->
   console.log "/newGame"
   res.render "newGame"
-  
-app.configure(->  
-  app.use( express.static(__dirname + '/../public') )  
-)  
+
+app.configure(->
+  app.use( express.static(__dirname + '/../public') )
+)
