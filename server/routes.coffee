@@ -35,7 +35,6 @@ app.get("/game/:id/status", (req,res)->
   console.info "/game/id/status"
   gameId = req.params.id
   console.info "param id #{gameId}"
-  unless game then res.redirect "/newGame"
   gameStatus = JSON.stringify( game.status(gameId) )
   res.render "gameStatus", {gameStatus: gameStatus }
 )
