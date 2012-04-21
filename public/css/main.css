@@ -1,4 +1,4 @@
-.title {
+}.title {
     text-align:center;
     height: 50px;
 }
@@ -52,4 +52,7 @@ body {
 	top: 0;
 	left: 0;
 	border: 0;
+}
+.forkme:hover {
+	opacity:0.7
 }
