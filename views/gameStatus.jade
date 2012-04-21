@@ -4,7 +4,7 @@ block append scripts
       require(['cs!/script/gameStatus'],(gameStatus)->
         $().ready ->
           var gameId =  $(location).attr('href').match(/game\/\d\/status/)[1]
-          $.getJson("game/#{gameId}/status.json", gameStatus.renderGame)
+          $.getJson("game/"+gameId+"/status.json", gameStatus.renderGame)
       )
     
 block content
