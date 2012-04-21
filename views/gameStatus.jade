@@ -4,7 +4,7 @@ block append scripts
       require(['jquery','cs!/script/gameStatus'],function(gameStatus){
         $().ready(function(){
           var gameId =  $(location).attr('href').match(/game\\/(\\d)\\/status/)[1]
-          $.getJSON("game/"+gameId+"/status.json", gameStatus.renderGame)
+          $.getJSON("/game/"+gameId+"/status.json", gameStatus.renderGame)
         });
       });
     
