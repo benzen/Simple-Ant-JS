@@ -38,7 +38,7 @@ app.get("/game/:id/status", (req,res)->
 app.get("/game/:id/status.json",(req,res) ->
   console.info "/game/id/status.json"
   gameId = req.params.id
-  console.log "game id #{gameiId}"
+  console.log "game id #{gameId}"
   gameStatus = JSON.stringify( game.status(gameId) )
   res.send gameStatus
 )
