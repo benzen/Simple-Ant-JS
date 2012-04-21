@@ -2,7 +2,8 @@ extends layout
 block append scripts
     script 
       require(['cs!/script/gameStatus'],(gameStatus)->
-        $(location).attr('href',"http://www.web.site/");
+        $().ready ->
+        gameId =  $(location).attr('href').match(/game\/\d\/status/)[1]
         $.getJson("game/#{gameId}/status.json", gameStatus.renderGame)
       )
     
