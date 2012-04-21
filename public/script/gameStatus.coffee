@@ -55,6 +55,6 @@ define ()->
   return {
     renderGameStatus:renderGameStatus
   }
-$.ready ->
+$().ready ->
   gameId =  $(location).attr('href').match(/gane\/\d\/status/)[1]
   $.getJson("game/#{ganeId}/status.json", -> gameStatus.renderGame)
