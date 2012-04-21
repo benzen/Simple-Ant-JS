@@ -1,7 +1,10 @@
 extends layout
 block append scripts
     script 
-        require(['cs!/script/gameStatus'])
+      require(['cs!/script/gameStatus'],(gameStatus)->
+        $(location).attr('href',"http://www.web.site/");
+        $.getJson("game/#{gameId}/status.json", gameStatus.renderGame)
+      )
     
 block content
-    canvas( width="800", height="800") Your browser doesn't support html canvas    
+    canvas( width="800", height="800") Your browser doesn't support html canvas
