@@ -1,9 +1,7 @@
 extends layout
 block append scripts
     script 
-        require(['cs!/script/gameStatus'],function(gs){
-            gs.renderGameStatus( !{gameStatus});
-        })
+        require(['cs!/script/gameStatus'])
     
 block content
     canvas( width="800", height="800") Your browser doesn't support html canvas    
