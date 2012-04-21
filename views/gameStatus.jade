@@ -4,7 +4,11 @@ block append scripts
       require(['cs!/script/gameStatus'],function(gameStatus){
         $().ready(function(){
           var gameId =  $(location).attr('href').match(/game\\/(\\d)\\/status/)[1]
-          $.getJSON("/game/"+gameId+"/status.json",null, gameStatus.renderGameStatus)
+		  var url = "/game/"+gameId+"/status.json";
+          window.setInterval(function() {
+            $.getJSON(url,null, gameStatus.renderGameStatus)
+		  }, 10000);
+          
         });
       });
     
