@@ -1,11 +1,11 @@
 b = require "./Board"
-a = require "./ant"
+a = require "./Ant"
 
 counter = 0
 incCounter = ->
   counter++
   return counter
-  
+
 games = []
 saveGame = (board, ants)->
   gameId = incCounter()
@@ -19,7 +19,7 @@ saveGame = (board, ants)->
 startGame=(gameId)->
   ants = games[gameId].ants
   for ant in ants
-    ant.smell("nothing")
+    ant.lives()
 
 createGame = (anthillX,anthillY, nbOfAnt, mapSize, eatX, eatY)->
   board = new b.Board(mapSize, anthillX, anthillY, eatX, eatY)
@@ -28,10 +28,10 @@ createGame = (anthillX,anthillY, nbOfAnt, mapSize, eatX, eatY)->
   "#{saveGame  board, ants}"
 
 status = (gameId)->
-  status = games[gameId].board.status()
-  console.log status 
+  boardStatus = games[gameId].board.status()
+  for
   status
-  
+
  exports.startGame = startGame
  exports.saveGame = saveGame
  exports.createGame = createGame
