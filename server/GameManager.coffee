@@ -17,7 +17,7 @@ class GameManager
       "ants":ants
       "board":board
     }
-    console.log games[gameId]
+    console.log @games[gameId]
     gameId
 
   startGame:(gameId)->
