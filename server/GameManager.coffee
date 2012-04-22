@@ -33,6 +33,8 @@ class GameManager
 
   status : (gameId)->
     boardStatus = @games[gameId].board.status()
-    status
+    antStatus = [ant.x, ant.y] for ant in @games[gameId].ants
+    console.log antStatus
+    boardStatus
 
 exports.GameManager = GameManager
