@@ -1,6 +1,7 @@
 express = require('express')
 _ = require("underscore")
-game = require("./Game")
+gameManagerModule = require("./GameManager")
+gameManager = new gameManagerModule.GameManager()
 
 app = express.createServer express.logger()
 app.set 'view engine', 'jade'
@@ -26,20 +27,21 @@ app.post('/createGame', (req, res)->
     eatX #{eatX},
     eatY #{eatY}
   """
-  gameId = game.createGame(anthillX,anthillY, nbOfAnt, mapSize, eatX, eatY)
-  game.startGame gameId
+  gameId = gameManager.createGame(anthillX,anthillY, nbOfAnt, mapSize, eatX, eatY)
+  gameManager.startGame gameId
   res.redirect "/game/#{gameId}/status"
 )
 
 app.get("/game/:id/status", (req,res)->
   console.info "/game/id/status"
+##TODO pass id of the game to the render
   res.render "gameStatus"
 )
 app.get("/game/:id/status.json",(req,res) ->
   console.info "/game/id/status.json"
   gameId = req.params.id
   console.log "game id #{gameId}"
-  gameStatus = JSON.stringify( game.status(gameId) )
+  gameStatus = JSON.stringify( gameManager.status(gameId) )
   res.send gameStatus
 )
 app.get '/', (req, res) ->
