@@ -2,7 +2,7 @@ class Ant
     constructor:(@anthillX,@anthillY)->
         @x=0
         @y=0
-    live:
+    live:->
       @smell("nothing")
     smell:(odor)->
       console.log("i smell #{odor}")
