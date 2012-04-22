@@ -49,7 +49,6 @@ body {
 }
 .button:hover, .button:focus {
 	color : white;
-	border : 3px;
 	border-style : solid;
 	border-color : white;
 }
