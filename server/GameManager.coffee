@@ -5,6 +5,7 @@ class GameManager
   constructor:
     @counter = 0
     @games = []
+
   incCounter : ->
     counter++
     return counter
@@ -35,7 +36,3 @@ class GameManager
     status
 
 exports.GameManager = GameManager
-## exports.startGame = startGame
-## exports.saveGame = saveGame
-## exports.createGame = createGame
-## exports.status = status
