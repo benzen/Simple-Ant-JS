@@ -7,8 +7,8 @@ class GameManager
     @games = []
 
   incCounter : ->
-    counter++
-    return counter
+    @counter++
+    return @counter
 
 
   saveGame : (board, ants)->
