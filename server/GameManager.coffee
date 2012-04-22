@@ -2,7 +2,7 @@ b = require "./Board"
 a = require "./Ant"
 
 class GameManager
-  constructor:
+  constructor: ->
     @counter = 0
     @games = []
 
