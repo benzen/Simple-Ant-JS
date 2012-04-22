@@ -33,7 +33,7 @@ class GameManager
 
   status : (gameId)->
     boardStatus = @games[gameId].board.status()
-    antStatus = [ant.x, ant.y] for ant in @games[gameId].ants
-    boardStatus[antPos[0]][antPos[1]]='a' for antPos in antStatus
+    boardStatus[ant.x][ant.y]= 'a' for ant in @games[gameId].ants
+    boardStatus
 
 exports.GameManager = GameManager
