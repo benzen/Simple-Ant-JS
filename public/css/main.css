@@ -12,42 +12,46 @@
     color:#45402A;
     margin:10px;
 }
-.title-element:hover{
-    color:white;
+.title-element:hover, .title-element:focus{
+    color : white;
+	border-style : solid;
+	border-color : white;
+	border : 3px;
 }
 body {
-    background-color:#232323;
-    margin: 0;
+    background-color : #232323;
+    margin : 0;
 }
 .body{
-    background-color:#383434;    
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    width: 900px;
-    min-height:1024px;
-    border-radius: 10px;
-    border-style: outset;
-    border-color:#c7c7c7;
-    color:#7d7d7d;
-    font-weight: bold;
+    background-color : #383434;    
+    position : relative;
+    margin-left : auto;
+    margin-right : auto;
+    width : 900px;
+    min-height : 1024px;
+    border-radius : 10px;
+    border-style : outset;
+    border-color : #c7c7c7;
+    color : #7d7d7d;
+    font-weight : bold;
 }
 .bodyText {
-    padding:10px;    
+    padding : 10px;    
 }
 .button{
-    display:inline-block;
-    border-radius:10px;
-    padding:5px;
-    background-color:#215ec7;
-    color:#45402A;
-    text-decoration: none;
-    margin: 5px;
+    display : inline-block;
+    border-radius : 10px;
+    padding : 5px;
+    background-color : #215ec7;
+    color : #45402A;
+    text-decoration : none;
+    margin : 5px;
 }
 .button:hover, .button:focus {
-	color: white;
-	border: 100px;
-	border-color: white;
+	color : white;
+	border : 3px;
+	border-style : solid;
+	border-color : white;
 }
 
 .forkme {
