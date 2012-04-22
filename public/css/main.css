@@ -44,9 +44,12 @@ body {
     text-decoration: none;
     margin: 5px;
 }
-.button:hover {
-    color:white;
+.button:focus:hover {
+	color: white;
+	border: 100px;
+	border-color: white;
 }
+
 .forkme {
 	position: absolute;
 	top: 0;
