@@ -7,7 +7,7 @@ block append scripts
           var url = "/game/"+gameId+"/status.json";
           window.setInterval(function() {
             $.getJSON(url,null, gameStatus.renderGameStatus)
-          }, 10000);
+          }, 1000);
           
         });
       });
