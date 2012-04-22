@@ -39,7 +39,8 @@ define ()->
     ctx.fill()
 
   drawAnt = (ctx, x, y)->
-    [color,radius,centerRadius, y1,y2,y3]=['white', 2, 1, y+2, y+2*2+1, y+3*2-3]
+    radius = 5
+    [color,centerRadius, lx, y1,y2,y3]=['white', radius-2, x+radius, y+radius, y+2*radius, y+3*radius]
     drawCercle ctx, color, x, y1, radius
     drawCercle ctx, color, x, y2, centerRadius
     drawCercle ctx, color, x, y3, radius
