@@ -44,12 +44,7 @@ body {
     text-decoration: none;
     margin: 5px;
 }
-.button:hover {
-	color: white;
-	border: 100px;
-	border-color: white;
-}
-.button:focus {
+.button:hover, .button:focus {
 	color: white;
 	border: 100px;
 	border-color: white;
