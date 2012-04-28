@@ -40,7 +40,7 @@ define ()->
 
   drawAnt = (ctx, x, y)->
     radius = 5
-    [color,centerRadius, lx, y1,y2,y3]=['white', radius, x+radius, y+radius, y+2*radius, y+3*radius]
+    [color,centerRadius, lx, y1,y2,y3]=['white', radius, x+2*radius, y+radius, y+2*radius, y+3*radius]
     drawCercle ctx, color, x, y1, radius
     drawCercle ctx, color, x, y2, centerRadius
     drawCercle ctx, color, x, y3, radius
