@@ -5,7 +5,7 @@ block append scripts
       var gameId =  $(location).attr('href').match(/game\\/(\\d)\\/status/)[1]
       var url = "/game/"+gameId+"/status.json";
       window.setInterval(function() {
-        $.getJSON(url,null, gameStatus.renderGameStatus)
+        $.getJSON(url,null, GameStatus.renderGameStatus)
       }, 1000);
     });
     
