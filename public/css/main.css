@@ -11,12 +11,13 @@
     text-decoration: none;
     color:#45402A;
     margin:10px;
+	border-style:solid;
+	border-color: transparent;
 }
 .title-element:hover, .title-element:focus {
     color : white;
     border-style : solid;
     border-color : white;
-
 }
 body {
     background-color : #232323;
