@@ -50,7 +50,7 @@ define ()->
 
   renderGameStatus = (data)->
     ctx = $("canvas").get(0).getContext("2d")
-    ctx.restore()##to clean it up
+    ctx.clearRect 0, 0, canvas.width, canvas.height
     drawRectangle( ctx, conf.color, conf.x,conf.y, conf.width, conf.height) for conf in createMapConf( data)
     drawAnt ctx,0,0
   return {
