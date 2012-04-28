@@ -1,4 +1,4 @@
-define ()->
+class GameStatus
   cercleRadius = 5
   smellToColor = (d)->
     if d == "E" then return "red"
@@ -53,6 +53,3 @@ define ()->
     ctx.clearRect 0, 0, $("canvas").attr("width"), $("canvas".("height")
     drawRectangle( ctx, conf.color, conf.x,conf.y, conf.width, conf.height) for conf in createMapConf( data)
     drawAnt ctx,0,0
-  return {
-    renderGameStatus:renderGameStatus
-  }
