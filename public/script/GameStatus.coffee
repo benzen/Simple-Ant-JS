@@ -8,7 +8,7 @@ class GameStatus
   @dataToRectangleConfig : (smell,row,column)=>
     [width, height] = [10,10]
     conf =
-      color: smellToColor( smell)
+      color: @smellToColor( smell)
       x: row*width
       y: column*height
       width: width
