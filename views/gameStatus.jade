@@ -1,16 +1,13 @@
 extends layout
 block append scripts
-    script 
-      require(['cs!/script/gameStatus'],function(gameStatus){
-        $().ready(function(){
-          var gameId =  $(location).attr('href').match(/game\\/(\\d)\\/status/)[1]
-          var url = "/game/"+gameId+"/status.json";
-          window.setInterval(function() {
-            $.getJSON(url,null, gameStatus.renderGameStatus)
-          }, 1000);
-          
-        });
-      });
+  script 
+    $().ready(function(){
+      var gameId =  $(location).attr('href').match(/game\\/(\\d)\\/status/)[1]
+      var url = "/game/"+gameId+"/status.json";
+      window.setInterval(function() {
+        $.getJSON(url,null, gameStatus.renderGameStatus)
+      }, 1000);
+    });
     
 block content
     canvas( width="800", height="800") Your browser doesn't support html canvas

@@ -4,7 +4,10 @@ html
     title SimpleJsAnt
     link(rel="stylesheet", type="text/css", href="/css/main.css")
     block scripts
-        script(src='/script/lib/require.js', data-main="/script/loader")
+        script(src="/script/lib/coffeescript.js")
+        script(src="/script/lib/jquery.js")
+        script(src="/script/gameStatus.coffee" type="text/coffeescript")
+        script(src="/script/newGame.coffee" type="text/coffeescript")
         
   body
     div.forkme
