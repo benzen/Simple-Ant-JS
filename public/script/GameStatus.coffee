@@ -41,16 +41,16 @@ class GameStatus
   @drawAnt: (ctx, x, y)->
     radius = 2
     [color,centerRadius, cx, y1,y2,y3]=['white', (radius*0.5), (x+radius*2), y+radius, y+2*radius, y+3*radius]
-    drawCercle ctx, color, cx, y1, radius
-    drawCercle ctx, color, cx, y2, centerRadius
-    drawCercle ctx, color, cx, y3, radius
+    @drawCercle ctx, color, cx, y1, radius
+    @drawCercle ctx, color, cx, y2, centerRadius
+    @drawCercle ctx, color, cx, y3, radius
 
   @drawPath: (ctx)->
-    drawCercle ctx, "#059863", 10, 18
+    @drawCercle ctx, "#059863", 10, 18
 
   @renderGameStatus: (data)->
     ctx = $("canvas").get(0).getContext("2d")
     ctx.clearRect 0, 0, $("canvas").attr("width"), $("canvas").attr("height")
-    drawRectangle( ctx, conf.color, conf.x,conf.y, conf.width, conf.height) for conf in createMapConf( data)
-    drawAnt ctx,0,0
+    @drawRectangle( ctx, conf.color, conf.x,conf.y, conf.width, conf.height) for conf in @createMapConf( data)
+    @drawAnt ctx,0,0
 window.GameStatus = GameStatus
