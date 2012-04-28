@@ -50,6 +50,6 @@ class GameStatus
 
   renderGameStatus: (data)->
     ctx = $("canvas").get(0).getContext("2d")
-    ctx.clearRect 0, 0, $("canvas").attr("width"), $("canvas".("height")
+    ctx.clearRect 0, 0, $("canvas").attr("width"), $("canvas").("height")
     drawRectangle( ctx, conf.color, conf.x,conf.y, conf.width, conf.height) for conf in createMapConf( data)
     drawAnt ctx,0,0
