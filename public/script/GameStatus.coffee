@@ -21,7 +21,7 @@ class GameStatus
     for row in data
       for cell in row
         smell = cell
-        mapConfig.push dataToRectangleConfig( smell, x, y )
+        mapConfig.push @dataToRectangleConfig( smell, x, y )
         x++
       x=0
       y++
