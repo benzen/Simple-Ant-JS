@@ -53,3 +53,4 @@ class GameStatus
     ctx.clearRect 0, 0, $("canvas").attr("width"), $("canvas").attr("height")
     drawRectangle( ctx, conf.color, conf.x,conf.y, conf.width, conf.height) for conf in createMapConf( data)
     drawAnt ctx,0,0
+window.GameStatus = GameStatus
