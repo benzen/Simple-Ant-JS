@@ -48,7 +48,7 @@ class GameStatus
   @drawPath: (ctx)->
     @drawCercle ctx, "#059863", 10, 18
 
-  @renderGameStatus: (data)->
+  @renderGameStatus: (data)=>
     ctx = $("canvas").get(0).getContext("2d")
     ctx.clearRect 0, 0, $("canvas").attr("width"), $("canvas").attr("height")
     @drawRectangle( ctx, conf.color, conf.x,conf.y, conf.width, conf.height) for conf in @createMapConf( data)
