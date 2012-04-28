@@ -40,10 +40,10 @@ define ()->
 
   drawAnt = (ctx, x, y)->
     radius = 5
-    [color,centerRadius, lx, y1,y2,y3]=['white', radius, x+2*radius, y+radius, y+2*radius, y+3*radius]
-    drawCercle ctx, color, x, y1, radius
-    drawCercle ctx, color, x, y2, centerRadius
-    drawCercle ctx, color, x, y3, radius
+    [color,centerRadius, cx, y1,y2,y3]=['white', radius, x+radius, y+radius, y+2*radius, y+3*radius]
+    drawCercle ctx, color, cx, y1, radius
+    drawCercle ctx, color, cx, y2, centerRadius
+    drawCercle ctx, color, cx, y3, radius
 
   drawPath = (ctx)->
     drawCercle ctx, "#059863", 10, 18
