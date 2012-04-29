@@ -42,6 +42,6 @@ class GameStatus
         else
           console.log "draw rectangle"
           color = @smellToColor cell
-          @drawRectangle ctx, color, cell_index, column_index, @cell_size, @cell_size
+          @drawRectangle ctx, color, cell_index*@cell_size, column_index*@cell_size, @cell_size, @cell_size
 
 window.GameStatus = GameStatus
