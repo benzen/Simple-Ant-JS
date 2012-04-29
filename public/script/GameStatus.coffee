@@ -33,7 +33,9 @@ class GameStatus
     ctx.clearRect 0, 0, $("canvas").attr("width"), $("canvas").attr("height")
 
     for column, column_index in data
+      console.log "column_index #{column_index}"
       for cell, cell_index in column
+        console.log "cell_index, #{cell_index}"
         if cell == "a"
           console.log "draw ant"
           @drawAnt ctx, cell_index, column_index
