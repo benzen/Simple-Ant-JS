@@ -1,6 +1,7 @@
 class GameStatus
   @cercleRadius : 5
   @smellToColor : (d)=>
+    console.log "color #{d}"
     if d == "E" then return "red"
     if d == "A" then return "black"
     return "\##{(parseInt(0x985d05)+parseInt(d)).toString(16)}"
