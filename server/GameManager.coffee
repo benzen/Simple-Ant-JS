@@ -32,11 +32,11 @@ class GameManager
     "#{@saveGame  board, ants}"
 
   status : (gameId)->
-    @gameTurn()
+    @gameTurn(gameId)
     boardStatus = @games[gameId].board.status()
     boardStatus[ant.x][ant.y]= 'a' for ant in @games[gameId].ants
     boardStatus
-  gameTurn:()->
+  gameTurn:(gameId)->
     @games[gameId].board.snort(ant.x, ant.y) for  ant in @games[gameId].ants
 
 exports.GameManager = GameManager
