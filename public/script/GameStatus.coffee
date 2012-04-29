@@ -52,9 +52,11 @@ class GameStatus
     ctx = $("canvas").get(0).getContext("2d")
     ctx.clearRect 0, 0, $("canvas").attr("width"), $("canvas").attr("height")
     for conf in @createMapConf( data)
-      if(data[conf.x][conf.y]=="a")
-        @drawAnt(ctx,conf.x, conf.y)
+      if data[conf.x][conf.y]=="a"
+        console.log "draw ant"
+        @drawAnt ctx, conf.x, conf.y
       else
-        @drawRectangle( ctx, conf.color, conf.x,conf.y, conf.width, conf.height)
+        console.log "draw rectangle"
+        @drawRectangle ctx, conf.color, conf.x,conf.y, conf.width, conf.height
 
 window.GameStatus = GameStatus
