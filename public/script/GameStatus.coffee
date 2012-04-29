@@ -52,6 +52,8 @@ class GameStatus
     ctx = $("canvas").get(0).getContext("2d")
     ctx.clearRect 0, 0, $("canvas").attr("width"), $("canvas").attr("height")
     for conf in @createMapConf( data)
+      console.log "conf"
+      console.log conf
       if data[conf.x][conf.y]=="a"
         console.log "draw ant"
         @drawAnt ctx, conf.x, conf.y
