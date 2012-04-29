@@ -51,6 +51,10 @@ class GameStatus
   @renderGameStatus: (data)=>
     ctx = $("canvas").get(0).getContext("2d")
     ctx.clearRect 0, 0, $("canvas").attr("width"), $("canvas").attr("height")
-    @drawRectangle( ctx, conf.color, conf.x,conf.y, conf.width, conf.height) for conf in @createMapConf( data)
-    @drawAnt ctx,0,0
+    for conf in @createMapConf( data)
+      if(data[conf.x][conf.y]=="a")
+        @drawAnt(ctx,conf.x, conf.y)
+      else
+        @drawRectangle( ctx, conf.color, conf.x,conf.y, conf.width, conf.height)
+
 window.GameStatus = GameStatus
