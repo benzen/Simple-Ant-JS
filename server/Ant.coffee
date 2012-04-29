@@ -13,8 +13,8 @@ class Ant
         else @findANewWayOfLife()
 
     randomMove:->
-        randomX = Math.round( Math.random()*2-1)
-        randomY = Math.round( Math.random()*2-1)
+        randomX = Math.max( 0, Math.round( Math.random() * 2 - 1 ) )
+        randomY = Math.max( 0, Math.round( Math.random() * 2 - 1 ) )
         @x = @x + randomX
         @y = @y + randomY
         console.log "random move to #{@x}-#{@y}"
