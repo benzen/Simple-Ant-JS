@@ -37,6 +37,6 @@ class GameManager
     boardStatus[ant.x][ant.y]= 'a' for ant in @games[gameId].ants
     boardStatus
   gameTurn:(gameId)->
-    @games[gameId].board.snort(ant.x, ant.y) for  ant in @games[gameId].ants
+    ant.smell( @games[gameId].board.snort(ant.x, ant.y)) for  ant in @games[gameId].ants
 
 exports.GameManager = GameManager
