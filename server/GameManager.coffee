@@ -1,10 +1,28 @@
 b = require "./Board"
 a = require "./Ant"
+pg = require "pg"
+/*
+pg.connect(process.env.DATABASE_URL, function(err, client) {
+  var query = client.query('SELECT * FROM your_table');
 
+  query.on('row', function(row) {
+    console.log(JSON.stringify(row));
+  });
+});
+*/
 class GameManager
   constructor: ->
     @counter = 0
     @games = []
+    createTableIfNecessary()
+
+  createTableIfNecessary :()->
+    var test = client.query('SELECT * FROM games');
+    test.on("error",(error)->
+      var queryc = client.query('CREATE TABLE games');
+    )
+
+
 
   incCounter : ->
     @counter++
